@@ -4,7 +4,7 @@
 
 - ## List
   - [Tentang Version Control System](#Tentang-Version-Control-System)
-  - [Jenis Version Control](#Jenis-Version-Control)
+  - [Jenis Version Control System](#Jenis-Version-Control-System)
   - [Apa itu Git?](#Apa-itu-Git?)
   - [Apa itu Github?](#Apa-itu-Github?)
   - [Instalasi Git](#Instalasi-Git)
