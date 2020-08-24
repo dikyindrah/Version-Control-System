@@ -2,7 +2,7 @@
     Version Control System
 </h1>
 
-- List
+- ## List
   - [Tentang Version Control System](#Tentang-Version-Control-System)
   - [Jenis Version Control](#Jenis-Version-Control)
   - [Apa itu Git?](#Apa-itu-Git?)
