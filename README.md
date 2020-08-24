@@ -17,7 +17,7 @@ Version control system (VCS) merupakan sebuah sistem yang digunakan untuk mengel
 
 **Beberapa informasi perubahan yang disimpan:**
 - Kode hash
-- Orang yang melakukan perubahan. 
+- Orang yang telah melakukan perubahan. 
 - Waktu ketika perubahan tersebut dilakukan. 
 - Bagian yang telah diubah, dihapus, dan ditambahkan.
 - Keterangan perubahan.
