@@ -42,7 +42,9 @@ Tidak hanya melakukan perubahan project pada repository di sebuah server. Seluru
 ## Apa itu Git?
 Git adalah software version control yang diciptakan oleh Linus Torvalds, yang pada awalnya ditujukan untuk pengembangan kernel Linux (Wikipedia). Git dapat digunakan untuk mengelola perubahan project secara offline maupun online pada sebuah repository. Kemudian salah satu kelebihan dari Git adalah menggunakan sistem terdistribusi yang artinya project tidak hanya disimpan pada satu tempat saja melainkan juga tersebar dan tersimpan pada seluruh orang yang berkerja pada repository yang sama, hal ini membuat seluruh data dari project akan lebih terjamin keamanannya.
 
-|[<img width='190' src='https://git-scm.com/images/logo@2x.png'>](https://git-scm.com/)|[<img width='190' src='https://subversion.apache.org/images/svn-square.jpg'](https://subversion.apache.org/)|[<img width='190' src='https://www.fullstackpython.com/img/logos/mercurial.png'](https://www.mercurial-scm.org/)|[<img width='190' src='https://www.kindpng.com/picc/m/168-1682460_cvs-version-control-logo-concurrent-version-system-logo.png'](https://www.nongnu.org/cvs/)|[<img width='190' src='']()|
+**Software version control lain:**
+
+| [<img width='190' src='https://git-scm.com/images/logos/logomark-orange@2x.png'>](https://git-scm.com/) |[<img width='190' src='https://azuharu.net/wp-content/uploads/2014/01/subversion-logo.png'>](https://subversion.apache.org/)|[<img width='190' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/New_Mercurial_logo.svg/853px-New_Mercurial_logo.svg.png'>](https://www.mercurial-scm.org/)|[<img width='190' src='https://img2.pngio.com/what-are-the-top-version-control-systems-the-linux-juggernaut-concurrent-versions-system-png-193_261.png'>](https://www.nongnu.org/cvs/)|
 
 
 
