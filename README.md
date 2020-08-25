@@ -5,8 +5,8 @@
 - ## List
   - [Tentang Version Control System](#Tentang-Version-Control-System)
   - [Jenis Version Control System](#Jenis-Version-Control-System)
-  - [Apa itu Git?](#Apa-itu-Git?)
-  - [Apa itu Github?](#Apa-itu-Github?)
+  - [Apa itu Git?](#Apa-itu-Git)
+  - [Apa itu Github?](#Apa-itu-Github)
   - [Area dan Keadaan File Pada Git](#Area-dan-Keadaan-File-Pada-Git)
   - [Instalasi Git](#Instalasi-Git)
   - [Konfigurasi Akun](#Konfigurasi-Akun)
