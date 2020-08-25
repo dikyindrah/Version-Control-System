@@ -45,7 +45,7 @@ Git adalah software version control yang diciptakan oleh Linus Torvalds, yang pa
 **Software version control lain:**
 
 | [<img width='190' src='https://git-scm.com/images/logos/logomark-orange@2x.png'>](https://git-scm.com/) | [<img width='190' src='https://azuharu.net/wp-content/uploads/2014/01/subversion-logo.png'>](https://subversion.apache.org/) | [<img width='190' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mercurial_no_border_logo.svg/1200px-Mercurial_no_border_logo.svg.png'>](https://www.mercurial-scm.org/) | [<img width='190' src='https://img2.pngio.com/what-are-the-top-version-control-systems-the-linux-juggernaut-concurrent-versions-system-png-193_261.png'>](https://www.nongnu.org/cvs/) | [<img width='190' src='https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Bazaar_logo_%28software_product%29.svg/1200px-Bazaar_logo_%28software_product%29.svg.png'>](https://bazaar.canonical.com/en/) |
-|---|---|---|---|
+|---|---|---|---|---|
 
 
 
