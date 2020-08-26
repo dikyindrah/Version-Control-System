@@ -54,7 +54,7 @@ Git adalah software version control yang diciptakan oleh Linus Torvalds, yang pa
 ## Apa Itu Github?
 Github adalah version control system berbasis web yang dapat digunakan untuk menyimpan project, mengelola project didalam repository, dan sebagai remote atau git server pada pengembangan project secara kelompok, ini digunakan untuk menyimpan repository secara online melalui layanan cloud di internet agar setiap orang dapat mengakses dan bekeja pada repository yang sama.
 
-Version control system berbasis web lain:
+**Version control system berbasis web lain:**
 
 | [<img width='190' src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'>](https://github.com/) | [<img width='190' src='https://cdn.iconscout.com/icon/free/png-256/bitbucket-8-1175256.png'>](https://bitbucket.org/) | [<img width='190' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1108px-GitLab_Logo.svg.png'>](https://gitlab.com/explore) | [Your logo here]() |
 |---|---|---|---|
