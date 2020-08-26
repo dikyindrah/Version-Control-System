@@ -5,8 +5,8 @@
 - ## List
   - [Tentang Version Control System](#Tentang-Version-Control-System)
   - [Jenis Version Control System](#Jenis-Version-Control-System)
-  - [Apa itu Git?](#Apa-itu-Git)
-  - [Apa itu Github?](#Apa-itu-Github)
+  - [Apa Itu Git?](#Apa-itu-Git)
+  - [Apa Itu Github?](#Apa-itu-Github)
   - [Area dan Keadaan File Pada Git](#Area-dan-Keadaan-File-Pada-Git)
   - [Instalasi Git](#Instalasi-Git)
   - [Konfigurasi Akun](#Konfigurasi-Akun)
@@ -14,7 +14,7 @@
   - [Membuat Repository](#Membuat-Repository)
 
 ## Tentang Version Control System
-Version control system (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
+Version Control System (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
 
 **Beberapa informasi perubahan yang disimpan:**
 - Kode hash
@@ -36,7 +36,7 @@ Sistem ini dikembangkan untuk memenuhi kebutuhan programmer yang ingin bekerja s
 
 **3. Distributed Version Control System**
    
-Tidak hanya melakukan perubahan project pada repository di sebuah server. Seluruh orang yang berkontribusi pada project di sistem ini memiliki salinan penuh repository, artinya project tidak hanya disimpan pada repository server saja melainkan juga di distribusikan dan di simpan pada repository lokal yaitu di komputer colaborator (orang yang memiliki akses pada repository untuk berkolaborasi). Jadi jika server rusak sekalipun, seluruh orang masih masih dapat melakukan pekerjaanya, karena mereka masih memiliki backup project yang ada di repository lokal (jika dibutuhkan project tersebut hanya perlu dikirim kemabali ke server).
+Tidak hanya melakukan perubahan project pada repository di sebuah server. Seluruh orang yang berkontribusi pada project di sistem ini memiliki salinan penuh repository, artinya project tidak hanya disimpan pada repository server saja melainkan juga di distribusikan dan di simpan pada repository lokal yaitu di komputer collaborator (orang yang memiliki akses pada repository untuk berkolaborasi). Jadi jika server rusak sekalipun, seluruh orang masih masih dapat melakukan pekerjaanya, karena mereka masih memiliki backup project yang ada di repository lokal (jika dibutuhkan project tersebut hanya perlu dikirim kemabali ke server).
 
 [<img width='500' src='https://miro.medium.com/max/1050/1*CEyiDu_mQ5u9NI0Fr2pSdA.png'>](https://medium.com/faun/centralized-vs-distributed-version-control-systems-a135091299f0)
 
