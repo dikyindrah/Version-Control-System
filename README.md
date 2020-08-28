@@ -88,3 +88,21 @@ Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini akan m
   - Kunjungi website resmi git [klik disini.](https://git-scm.com/download/win)
   - Kemudian pilih dan download sesuai tipe sistem yang digunakan oleh windows (32 bit atau 64 bit).
   - Lakukan prosedur instalasi software hingga selesai.
+
+## Konfigurasi Akun
+
+Akun perlu ditambahkan sebagai pengenal ketika kita melakukan commit. Untuk konfigurasi akun sendiri terdiri dari lokal dan global. 
+
+konfigurasi lokal digunakan untuk mengatur pengenal pada penggunaan git secara lokal, ketika kita mengelola project secara mandiri/offline di komputer pribadi:
+```bash
+# Konfigurasi akun secara lokal
+git config --lokal user.name "nama"
+git config --lokal user.email "email"
+```
+
+konfigurasi global digunakan untuk mengatur pengenal pada penggunaan git secara global yang artinya pada konfigurasi global digunakan ketika kita mengembangkan project secara kelompok di repository yang terdapat pada remote / git server:
+```bash
+# Konfigurasi akun secara global
+git config --global user.name "nama"
+git config --global user.email "email"
+```
