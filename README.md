@@ -80,3 +80,11 @@ Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini akan m
 
 - *Commited* : Keadaan ini menunjukan bahwa file beserta perubahannya sudah di commit dan sudah dismpan pada database git.
 
+## Instalasi Git
+- Linux
+  - Instalasi git dengan linux selengkapnya dapat mengunjungi website resmi git [klik disini.](https://git-scm.com/download/linux)
+
+- Windows
+  - Kunjungi website resmi git [klik disini.](https://git-scm.com/download/win)
+  - Kemudian pilih dan download sesuai tipe sistem yang digunakan oleh windows (32 bit atau 64 bit).
+  - Lakukan prosedur instalasi software hingga selesai.
