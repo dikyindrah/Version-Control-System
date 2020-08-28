@@ -90,7 +90,6 @@ Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini akan m
   - Lakukan prosedur instalasi software hingga selesai.
 
 ## Konfigurasi Akun
-
 Akun perlu ditambahkan sebagai pengenal ketika kita melakukan commit. Untuk konfigurasi akun sendiri terdiri dari lokal dan global. 
 
 konfigurasi lokal digunakan untuk mengatur pengenal pada penggunaan git secara lokal, ketika kita mengelola project secara mandiri/offline di komputer pribadi:
