@@ -60,13 +60,23 @@ Github adalah version control system berbasis web yang dapat digunakan untuk men
 |---|---|---|---|
 
 ## Area dan Keadaan File Pada Git
-Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini sangat penting, karena pada dasarnya ini akan memberikan gambaran tentang alur kerja penggunaan git.
+Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini akan memberikan gambaran tentang alur kerja penggunaan git.
 
 **Area :**
 
-- `Working Directory` : Ini adalah area diamana kita bekerja untuk mengembangkan project. pada area ini kita dapat menambah, merubah isi, dan menghapus file pada project didalam repository.
+- ***Working Directory*** : Ini adalah area diamana kita bekerja untuk mengembangkan project. pada area ini kita dapat menambah, merubah isi, dan menghapus file pada project didalam repository.
 
-- `Staging Area` : Area ini untuk menampung file - file beserta perubahan yang ingin kita commit (Rekaman perubahan (Snapshot) yang disimpan). File yang sudah masukan ke area ini akan dilacak atau ditandai untuk dipantau pada setiap perubahan yang terjadi. 
+- ***Staging Area*** : Area ini untuk menampung file - file beserta perubahan yang ingin kita commit (Rekaman perubahan (Snapshot) yang disimpan). File yang sudah masukan ke area ini akan dilacak atau ditandai untuk dipantau pada setiap perubahan yang terjadi. 
 
-- `Git Directory` : Seluruh file beserta perubahannya disimpan pada area ini (database lokal git) sebagai commit.
+- ***Git Directory*** : Seluruh file beserta perubahannya disimpan pada area ini (database lokal git) sebagai commit.
+
+**Keadaan File :**
+
+- ***Untracked*** : File belum dimasukan ke staging area yang artinya file tersebut belum terlacak atau ditandai oleh git, dalam keadaan ini apapun yang terjadi pada file tersebut akan diabaikan oleh git.
+
+- ***Modifed*** : Ketika file sudah disimpan sebagai commit, namun pada file tersebut kembali dilakukan perubahan dan belum di commit.
+
+- ***Staged*** : File beserta perubah yang telah dilakukan sudah dimasukan ke staging area dan file tersebut sudah ditandai oleh git untuk dipantau setiap perubahannya.
+
+- ***Commited*** : Keadaan ini menunjukan bahwa file beserta perubahannya sudah di commit dan sudah dismpan pada database git.
 
