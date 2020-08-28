@@ -58,3 +58,15 @@ Github adalah version control system berbasis web yang dapat digunakan untuk men
 
 | [<img width='190' src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'>](https://github.com/) | [<img width='190' src='https://cdn.iconscout.com/icon/free/png-256/bitbucket-8-1175256.png'>](https://bitbucket.org/) | [<img width='190' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1108px-GitLab_Logo.svg.png'>](https://gitlab.com/explore) | [Your logo here]() |
 |---|---|---|---|
+
+## Area dan Keadaan File Pada Git
+Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini sangat penting, karena pada dasarnya ini akan memberikan gambaran tentang alur kerja penggunaan git.
+
+**Area :**
+
+- `Working Directory` : Ini adalah area diamana kita bekerja untuk mengembangkan project. pada area ini kita dapat menambah, merubah isi, dan menghapus file pada project didalam repository.
+
+- `Staging Area` : Area ini untuk menampung file - file beserta perubahan yang ingin kita commit (Rekaman perubahan (Snapshot) yang disimpan). File yang sudah masukan ke area ini akan dilacak atau ditandai untuk dipantau pada setiap perubahan yang terjadi. 
+
+- `Git Directory` : Seluruh file beserta perubahannya disimpan pada area ini (database lokal git) sebagai commit.
+
