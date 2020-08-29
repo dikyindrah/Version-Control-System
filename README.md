@@ -90,18 +90,30 @@ Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini akan m
   - Lakukan prosedur instalasi software hingga selesai.
 
 ## Konfigurasi Akun
-Akun perlu ditambahkan sebagai pengenal ketika kita melakukan commit. Untuk konfigurasi akun sendiri terdiri dari lokal dan global. 
+Akun perlu ditambahkan sebagai pengenal ketika kita melakukan commit. Untuk konfigurasi akun sendiri terdiri dari lokal dan global.
 
 konfigurasi lokal digunakan untuk mengatur pengenal pada penggunaan git secara lokal, ketika kita mengelola project secara mandiri/offline di komputer pribadi:
 ```bash
 # Konfigurasi akun secara lokal
-git config --lokal user.name "nama"
-git config --lokal user.email "email"
+$ git config --lokal user.name "nama"
+$ git config --lokal user.email "email"
 ```
 
 konfigurasi global digunakan untuk mengatur pengenal pada penggunaan git secara global yang artinya pada konfigurasi global digunakan ketika kita mengembangkan project secara kelompok di repository yang terdapat pada remote / git server:
 ```bash
 # Konfigurasi akun secara global
-git config --global user.name "nama"
-git config --global user.email "email"
+$ git config --global user.name "nama"
+$ git config --global user.email "email"
+```
+*Note:* Perintah `git config` secara umum digunakan untuk mengatur seluruh kofigurasi pada git.
+
+## Konfigurasi Kode Editor
+Git telah menyediakan kode editor bawaan bernama VIM untuk membantu kita menulis kode pada project. Namun akan lebih mudah jika kita dapat menggunakan kode editor lain sebagai kode editor utama, mungkin kode editor yang sering kita pakai seperti Visual Studio Code, Sublime Text, Atom, Notepad++, dll. Konfigurasinya dapat dilakukan dengan cara:
+
+```bash
+# Konfigurasi kode editor
+$ git config --global core.editor "'paste direktori kode editor disini' -n -w "
+
+# Contoh ketika saya menggunakan visual studio code
+$ git config --global core.editor "'C:\Program Files (x86)\VSCode-win32-x64-1.40.2\Code.exe' -n -w "
 ```
