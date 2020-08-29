@@ -127,7 +127,7 @@ $ git config --global -e
 ```
 
 ## Melihat Seluruh Konfigurasi
-Untuk melihat seluruh konfigurasi yang telah di atur dapat menggunakan perintah berikut:
+Untuk melihat seluruh konfigurasi yang telah di lakukan dapat menggunakan perintah berikut:
 
 ```bash
 #Melihat seluruh konfigurasi
