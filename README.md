@@ -117,3 +117,10 @@ $ git config --global core.editor "'paste direktori kode editor disini' -n -w "
 # Contoh ketika saya menggunakan visual studio code
 $ git config --global core.editor "'C:\Program Files (x86)\VSCode-win32-x64-1.40.2\Code.exe' -n -w "
 ```
+
+Setelah mengatur kode editor yang kita inginkan sebagai kode editor utama, selanjutnya kita dapat memanggilnya dengan cara:
+
+```bash
+# Memanggil kode editor
+$ git config --global -e
+```
