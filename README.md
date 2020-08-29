@@ -65,7 +65,7 @@ Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini akan m
 
 **Area :**
 
-- *Working Directory* : Ini adalah area diamana kita bekerja untuk mengembangkan project. pada area ini kita dapat menambah, merubah isi, dan menghapus file pada project didalam repository.
+- *Working Directory* : Ini adalah area diamana kita bekerja untuk mengembangkan project. pada area ini kita dapat menambah, mengubah isi, dan menghapus file pada project didalam repository.
 
 - *Staging Area* : Area ini untuk menampung file - file beserta perubahan yang ingin kita commit (Rekaman perubahan (Snapshot) yang disimpan). File yang sudah masukan ke area ini akan dilacak atau ditandai untuk dipantau pada setiap perubahan yang terjadi. 
 
