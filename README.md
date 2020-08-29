@@ -11,6 +11,7 @@
   - [Instalasi Git](#Instalasi-Git)
   - [Konfigurasi Akun](#Konfigurasi-Akun)
   - [Konfigurasi Kode Editor](#Konfigurasi-Kode-Editor)
+  - [Melihat Seluruh Konfigurasi](#Melihat-Seluruh-Konfigurasi)
   - [Membuat Repository](#Membuat-Repository)
 
 ## Tentang Version Control System
