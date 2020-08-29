@@ -125,3 +125,11 @@ Setelah mengatur kode editor yang kita inginkan sebagai kode editor utama, selan
 # Memanggil kode editor
 $ git config --global -e
 ```
+
+## Melihat Seluruh Konfigurasi
+Untuk melihat seluruh konfigurasi yang telah di atur dapat menggunakan perintah berikut:
+
+```bash
+#Melihat seluruh konfigurasi
+$ git config --list
+```
