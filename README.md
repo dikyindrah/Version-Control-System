@@ -133,3 +133,23 @@ Untuk melihat seluruh konfigurasi yang telah di lakukan dapat menggunakan perint
 #Melihat seluruh konfigurasi
 $ git config --list
 ```
+
+## Membuat Repository
+Pada dasarnya kita membutuhkan sebuah tempat untuk menyimpan seluruh data dan informasi mengenai project yang kita miliki. Git telah menyediakan tempat penyimpanan yang disebut sebagai Repository, ini adalah sebuah folder dimana seluruh data berupa file dan informasi penting mengenai project disimpan. untuk membuat repository kita perlu membuat sebuah folder yang di inisialisasi sebagai repository, lalu bagaimana caranya?.. 
+
+Kita dapa menggunakan perintah `git init`, ini adalah perintah yang digunakan untuk menginisialisasi folder menjadi sebuah repository. Beberapa cara yang dapat dilakukan dengan perintah ini:
+
+Membuat folder terlebih dahulu pada komputer kemudian masuk pada folder tersebut dan ketikan perintah git bash:
+```bash
+# Menginisialiasi folder yang sudah ada menjadi sebuah repository
+$ git init .
+```
+
+Tentukan lokasi penyimpanan repo kemudian berikan perintah berikut pada git bash:
+```bash
+# Membuat folder sekaligus menginisialisasi menjadi sebuah repository
+$ git init namaRepository
+
+# Menginisialisasi sekaligus membuat folder untuk meletakan repository  
+$ git init namaFolder/namaRepository
+```
