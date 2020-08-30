@@ -145,11 +145,11 @@ Membuat folder terlebih dahulu pada komputer kemudian masuk pada folder tersebut
 $ git init .
 ```
 
-Tentukan lokasi penyimpanan repo kemudian berikan perintah berikut pada git bash:
+Tentukan lokasi penyimpanan repository kemudian berikan perintah berikut pada git bash:
 ```bash
 # Membuat folder sekaligus menginisialisasi menjadi sebuah repository
 $ git init namaRepository
 
-# Menginisialisasi sekaligus membuat folder untuk meletakan repository  
+# Membuat folder untuk meletakan folder yang di inisialisasi sebagai repository  
 $ git init namaFolder/namaRepository
 ```
