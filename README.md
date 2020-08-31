@@ -13,7 +13,7 @@
   - [Konfigurasi Kode Editor](#Konfigurasi-Kode-Editor)
   - [Melihat Seluruh Konfigurasi](#Melihat-Seluruh-Konfigurasi)
   - [Membuat Repository](#Membuat-Repository)
-  - [Membuat Dan Menempatkan Project Pada Repository](#Membuat-Dan-Menempatkan-project-pada-repository)
+  - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-project-pada-repository)
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melakukan Commit](#Melakukan-Commit)
@@ -157,3 +157,8 @@ $ git init namaRepository
 # Membuat folder untuk meletakan folder yang di inisialisasi sebagai repository  
 $ git init namaFolder/namaRepository
 ```
+
+## Membuat Dan Menempatkan Project Kedalam Repository
+Agar project dapat dikelola dengan version control system, project harus ditempatkan kedalam repostiory. Lalu bagaimana caranya?...
+
+Cara paling umum digunakan adalah dengan membuat repository terlebih dahulu kemudian membuat project dan menyimpannya kedalam repository yang telah dibuat.
