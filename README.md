@@ -13,7 +13,7 @@
   - [Konfigurasi Kode Editor](#Konfigurasi-Kode-Editor)
   - [Melihat Seluruh Konfigurasi](#Melihat-Seluruh-Konfigurasi)
   - [Membuat Repository](#Membuat-Repository)
-  - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-project-pada-repository)
+  - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-Project-Kedalam-Repository)
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melakukan Commit](#Melakukan-Commit)
@@ -162,3 +162,14 @@ $ git init namaFolder/namaRepository
 Agar project dapat dikelola dengan version control system, project harus ditempatkan kedalam repostiory. Lalu bagaimana caranya?...
 
 Cara paling umum digunakan adalah dengan membuat repository terlebih dahulu kemudian membuat project dan menyimpannya kedalam repository yang telah dibuat.
+
+## Memindahkan File Kedalam Staging Area
+Seluruh file beserta perubahan yang telah dilakukan pada project di dalam repository perlu di pindahkan ke dalam staging area untuk ditandai agar dapat dipantau oleh git pada setiap perubahanya. perintah `git add` dapat digunakan dalam hal ini, beberapa cara yang dapat dilakukan:
+
+```bash
+# Memindahkan satu file yang ada pada working directory
+$ git add namaFile
+
+# Memindahkan Seluruh file yang ada pada working directory
+$ git add .
+```
