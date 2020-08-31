@@ -13,6 +13,10 @@
   - [Konfigurasi Kode Editor](#Konfigurasi-Kode-Editor)
   - [Melihat Seluruh Konfigurasi](#Melihat-Seluruh-Konfigurasi)
   - [Membuat Repository](#Membuat-Repository)
+  - [Membuat Dan Menempatkan Project Pada Repository](#Membuat-Dan-Menempatkan-project-pada-repository)
+  - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
+  - [Melihat Status Repository](#Melihat-Status-Repository)
+  - [Melakukan Commit](#Melakukan-Commit)
 
 ## Tentang Version Control System
 Version Control System (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
