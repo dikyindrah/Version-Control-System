@@ -173,3 +173,11 @@ $ git add namaFile
 # Memindahkan Seluruh file yang ada pada working directory
 $ git add .
 ```
+
+## Melihat Status Repository
+Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh pengguna git, ini akan membuat kita lebih mudah dalam mengetahui apa-apa saja yang telah terjadi pada project didalam repository, serta membantu kita dalam menentukan langkah apa yang selanjutnya perlu dilakukan. Perintah `git status` dapat digunakan untuk melihat status perubahan yang terjadi pada project didalam repository, pada git bash ketikan perintah:
+
+```bash
+# Melihat Status Repository
+$ git status
+```
