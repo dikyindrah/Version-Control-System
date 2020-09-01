@@ -181,3 +181,24 @@ Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh p
 # Melihat Status Repository
 $ git status
 ```
+
+## Melakukan Commit
+Setelah perubahan pada project didalam repository telah di tandai, selanjutnya adalah melakukan commit untuk menyimpan perubahan yang telah dilakukan kedalam git directory. Kita dapat menggunakan perintah `git commit` untuk menyimpan perubahan tersebut. Cara yang dapat dilakukan adalah:
+
+Ketika file atau project didalam repository baru pertama kali dibuat dan dipindahkan ke staging area untuk ditandai, gunakan perintah:
+```bash
+$ git commit -m "tuslis pesan berupa keterangan commit"
+
+# Contoh ketika saya melakukan perubahan dengan menambahkan file baru bernama index.html pada project didalam repository
+$ git commit -m "menambahkan file index.html pada project"
+```
+perintah tersebut dapat digunakan, tetapi setiap kali perubahan yang ingin kita commit harus kita masukan kedalam staging area terlebih dahulu kemudian commit dapat dilakukan dengan perintah tersebut.
+
+Namun jika sebelumnya file atau project didalam repository sudah pernah dilakukan commit, yang artinya kita kembali melakukan perubahan pada file atau project tersebut. Maka kita dapat memindahkan ke staging area sekaligus melakukan commit menggunakan perintah berikut:
+```bash
+$ git commit -am "tuslis pesan berupa keterangan commit"
+
+# Contoh ketika saya kembali melakukan perubahan dengan menambahkan struktur html pada file index.html yang sebelumnya sudah pernah saya commit
+$ git commit -am "menambahkan struktur html pada file index.html"
+```
+
