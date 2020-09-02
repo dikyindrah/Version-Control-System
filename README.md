@@ -208,6 +208,20 @@ Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh p
 $ git status
 ```
 
+## Melihat Riwayat Perubahan
+
+```bash
+$ git log
+
+$ git log -3
+
+$ git log --author="nama orang yang melakukan commit"
+```
+
+```bash
+$ git log --all --decorate --oneline --graph
+```
+
 ## Membuat Branch
 Secara umum branch memiliki arti cabang. Pada git pembuatan cabang digunakan untuk mengembangkan fitur baru pada project tetapi kita tidak ingin merusak atau menggangu file utama dari project, Kemudian pembuatan cabang juga digunakan untuk membagi tugas ke setiap orang yang mengembangkan fitur pada pengembangan project secara kelompok di repository yang sama. 
 
