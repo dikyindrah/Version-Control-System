@@ -209,16 +209,23 @@ $ git status
 ```
 
 ## Melihat Riwayat Perubahan
+Tidak hanya melihat status repositoy, tetapi kita juga dapat melihat riwayat perubahan atau history dari sebuah commit yang dilakukan oleh diri kita dan orang lain.
 
+Perintah `git log` dapat kita gunakan untuk melihat seluruh riwayat perubahan project yang yang telah dilakukan, kemudian kita juga dapat menambahkan beberapa argumen untuk menampiilkan sesuatu yang lebih spesifik: 
 ```bash
-$ git log
+# Melihat seluruh riwayat perubahan
+$ git log --all
 
+# Melihat 3 riwayat perubahan terakhir
 $ git log -3
 
+# Melihat riwayat perubahan berdasarkan nama orang
 $ git log --author="nama orang yang melakukan commit"
 ```
 
+Hal lain yang dapat kita lakukan adalah melihat seluruh riwayat perubahan yang ada dalam bentuk grafik bercabang, tentunya ini akan membuat kita lebih mudah dalam pemantauan  suadah sampai mana project yang telah dikembangkan.
 ```bash
+# Melihat riwayat perubahan dengan grafik bercabang 
 $ git log --all --decorate --oneline --graph
 ```
 
