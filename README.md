@@ -18,8 +18,9 @@
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Membuat Branch](#Membuat-Branch)
-  - [Melakukan Merge](#Melakukan-Merge)
   - [Melakukan Checkout](#Melakukan-Checkout)
+  - [Melakukan Merge](#Melakukan-Merge)
+  - [Menghapus Branch](#Menghapus-Branch)
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
   - [Mempersingkat Perintah Git Bash Yang Panjang](#Mempersingkat-Perintah-Git-Bash-Yang-Panjang)
   
@@ -58,8 +59,8 @@ Git adalah software version control yang diciptakan oleh Linus Torvalds, yang pa
 | [<img width='190' src='https://git-scm.com/images/logos/logomark-orange@2x.png'>](https://git-scm.com/) | [<img width='190' src='https://azuharu.net/wp-content/uploads/2014/01/subversion-logo.png'>](https://subversion.apache.org/) | [<img width='190' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mercurial_no_border_logo.svg/1200px-Mercurial_no_border_logo.svg.png'>](https://www.mercurial-scm.org/) | [<img width='190' src='https://img2.pngio.com/what-are-the-top-version-control-systems-the-linux-juggernaut-concurrent-versions-system-png-193_261.png'>](https://www.nongnu.org/cvs/) | [<img width='190' src='https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Bazaar_logo_%28software_product%29.svg/1200px-Bazaar_logo_%28software_product%29.svg.png'>](https://bazaar.canonical.com/en/) |
 |---|---|---|---|---|
 
-| []() | []() | []() | []() | []() |
-|---|---|---|---|---| 
+<!-- | []() | []() | []() | []() | []() |
+|---|---|---|---|---|  -->
 
 ## Apa Itu Github?
 Github adalah version control system berbasis web yang dapat digunakan untuk menyimpan project, mengelola project didalam repository, dan sebagai remote atau git server pada pengembangan project secara kelompok, ini digunakan untuk menyimpan repository secara online melalui layanan cloud di internet agar setiap orang dapat mengakses dan bekeja pada repository yang sama.
