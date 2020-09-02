@@ -20,7 +20,7 @@
   - [Membuat Branch](#Membuat-Branch)
   - [Melakukan Merge](#Melakukan-Merge)
   - [Melakukan Checkout](#Melakukan-Checkout)
-  - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan-Dalam-Bentuk-Grafik-Bercabang)
+  - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
   - [Mempersingkat Perintah Git Bash Yang Panjang](#Mempersingkat-Perintah-Git-Bash-Yang-Panjang)
   
 ## Tentang Version Control System
