@@ -221,6 +221,12 @@ $ git log -3
 
 # Melihat riwayat perubahan berdasarkan nama orang
 $ git log --author="nama orang yang melakukan commit"
+
+# Melihat riwayat perubahan berdasarkan nama file
+$ git log -- namaFile
+
+# Melihat riwayat perubahan file yang telah dihapus
+$ git log --diff-filter=D
 ```
 
 Hal lain yang dapat kita lakukan adalah melihat seluruh riwayat perubahan yang ada dalam bentuk grafik bercabang, tentunya ini akan membuat kita lebih mudah dalam pemantauan  suadah sampai mana project yang telah dikembangkan.
