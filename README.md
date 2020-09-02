@@ -17,6 +17,12 @@
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
+  - [Melihat Riwayat Perubahan Yang Telah Dilakukan](#Melihat-Riwayat-Perubahan-Yang-Telah-Dilakukan)
+  - [Membuat Branch](#Membuat-Branch)
+  - [Melakukan Merge](#Melakukan-Merge)
+  - [Melakukan Checkout](#Melakukan-Checkout)
+  - [Melihat Seluruh Riwayat Perubahan Dalam Bentuk Grafik Bercabang](#Melihat-Seluruh-Riwayat-Perubahan-Dalam-Bentuk-Grafik-Bercabang)
+  - [Mempersingkat Perintah Git Bash Yang Panjang](#)
   
 ## Tentang Version Control System
 Version Control System (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
