@@ -17,11 +17,11 @@
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
+  - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
   - [Membuat Branch](#Membuat-Branch)
   - [Melakukan Checkout](#Melakukan-Checkout)
   - [Melakukan Merge](#Melakukan-Merge)
   - [Menghapus Branch](#Menghapus-Branch)
-  - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
   - [Mempersingkat Perintah Git Bash Yang Panjang](#Mempersingkat-Perintah-Git-Bash-Yang-Panjang)
   
 ## Tentang Version Control System
