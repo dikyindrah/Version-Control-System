@@ -15,9 +15,9 @@
   - [Membuat Repository](#Membuat-Repository)
   - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-Project-Kedalam-Repository)
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
-  - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melakukan Commit](#Melakukan-Commit)
-
+  - [Melihat Status Repository](#Melihat-Status-Repository)
+  
 ## Tentang Version Control System
 Version Control System (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
 
@@ -174,14 +174,6 @@ $ git add namaFile
 $ git add .
 ```
 
-## Melihat Status Repository
-Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh pengguna git, ini akan membuat kita lebih mudah dalam mengetahui apa-apa saja yang telah terjadi pada project didalam repository, serta membantu kita dalam menentukan langkah apa yang selanjutnya perlu dilakukan. Perintah `git status` dapat digunakan untuk melihat status perubahan yang terjadi pada project didalam repository, pada git bash ketikan perintah:
-
-```bash
-# Melihat Status Repository
-$ git status
-```
-
 ## Melakukan Commit
 Setelah perubahan pada project didalam repository telah di tandai, selanjutnya adalah melakukan commit untuk menyimpan perubahan yang telah dilakukan kedalam git directory. Kita dapat menggunakan perintah `git commit` untuk menyimpan perubahan tersebut. Cara yang dapat dilakukan adalah:
 
@@ -200,5 +192,13 @@ $ git commit -am "tuslis pesan berupa keterangan commit"
 
 # Contoh ketika saya kembali melakukan perubahan dengan menambahkan struktur html pada file index.html yang sebelumnya sudah pernah saya commit
 $ git commit -am "menambahkan struktur html pada file index.html"
+```
+
+## Melihat Status Repository
+Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh pengguna git, ini akan membuat kita lebih mudah dalam mengetahui apa-apa saja yang telah terjadi pada project didalam repository, serta membantu kita dalam menentukan langkah apa yang selanjutnya perlu dilakukan. Perintah `git status` dapat digunakan untuk melihat status perubahan yang terjadi pada project didalam repository, pada git bash ketikan perintah:
+
+```bash
+# Melihat Status Repository
+$ git status
 ```
 
