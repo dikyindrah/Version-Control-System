@@ -244,4 +244,23 @@ Gunakan perintah `git branch` untuk membuat cabang:
 $ git branch namaBranch
 ```
 
+## Melakukan Checkout
+Checkout memungkinkan kita untuk berpindah cabang dan kembali ke keadaan project pada waktu tertentu.
+
+Kita hanya perlu menggunakan perintah `git checkout` untuk memindahkan posisi HEAD -> (ini adalah tanda yang menunjukan posisi saat ini kita berada) ke cabang atau keadaan yang kita inginkan:
+
+```bash
+# Berpindah cabang
+$ git checkout namaBranch
+
+# Kembali pada keadaan project pada waktu tertentu
+$ git checkout kodeHash
+```
+
+Perintah `git checkout` juga dapat digunakan untuk membuat cabang sekaligus berpindah pada cabang tersebut, tambahkan argumen berikut:
+
+```bash
+# Membuat cabang sekaligus berpindah pada cabang tersebut
+$ git checkout -b namaBranch
+```
 
