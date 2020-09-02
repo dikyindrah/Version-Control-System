@@ -207,3 +207,13 @@ Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh p
 $ git status
 ```
 
+## Membuat Branch
+Secara umum branch memiliki arti cabang. Pada git pembuatan cabang digunakan untuk mengembangkan fitur baru pada project tetapi kita tidak ingin merusak atau menggangu file utama dari project, Kemudian pembuatan cabang juga digunakan untuk membagi tugas ke setiap orang yang mengembangkan fitur pada pengembangan project secara kelompok di repository yang sama. 
+
+Gunakan perintah `git branch` untuk membuat cabang:
+```bash
+# Membuat Branch
+$ git branch namaBranch
+```
+
+
