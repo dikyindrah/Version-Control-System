@@ -265,14 +265,20 @@ $ git checkout -b namaBranch
 ```
 
 ## Melakukan Merge
-Ketika telah berhasil menyelesaikan fitur, seseorang harus menyatukan cabang dimana dia mengerjakan fitur tersebut ke cabang utama (master). Untuk menggabungkan cabang pada git Ada dua cara:
+Ketika telah berhasil menyelesaikan fitur, seseorang harus menyatukan cabang dimana dia mengerjakan fitur tersebut ke cabang utama (master). 
 
-- *Fast Forward* : Menggabungkan dua cabang yang memiliki jalur langsung dan tidak membuat commit baru.
+Hal yang perlu diperhatikan sebelum benar-benar melakukan merge adalah jalur penggabungan cabang, pada git terdapat dua jalur penggabungan yaitu:
 
-- *Tree Way Merging* : Menggabungkan dua cabang yang tidak memiliki jalur langsung dengan membuat commit baru.
+- *Fast Forward* : Cabang ini memliki jalur langsung dengan cabang utama, jika menggabungakan cabang pada jalur ini kedua cabang akan tergabung menjadi satu tanpa membuat commit baru.
 
-1. Ketika kita sedang berada di cabang yang kita gunakan untuk mengerjakan fitur sebut saja sebagai branch feature, lakukan checkout terlebih dahulu ke branch master.
-2. Selanjutnya gunakan perintah `git merge` dengan menambahkan nama branch yang ingin kita gabungkan ke branch master yaitu branch feature:
+- *Tree Way Merging* : Cabang ini tidak memliki jalur langsung dengan cabang utama, jika menggabungakan cabang pada jalur ini kedua cabang akan tergabung menjadi satu dengan membuat commit baru.
+
+Lalu bagaimana cara menggabungkan cabang?...
+
+**Menggabungkan Cabang:**
+
+1. Ketika sedang berada di cabang yang gunakan untuk mengerjakan fitur, sebut saja sebagai branch feature, lakukan checkout atau berpindah cabang terlebih dahulu ke branch master.
+2. Selanjutnya gunakan perintah `git merge` dengan menambahkan nama branch yang ingin kita gabungkan ke branch master, yaitu branch feature:
    ```bash
    # menggabungkan branch
    $ git merge namaBranch
@@ -282,3 +288,8 @@ Ketika telah berhasil menyelesaikan fitur, seseorang harus menyatukan cabang dim
    ```
 3. Jika tidak ada masalah maka branch feature secara otomatis akan menjadi satu dengan branch master.
 
+Dalam melakakukan merge di sebuah cabang pada project individu sebuah conflict/masalah akan jarang ditemukan. Berbeda jika kita melakukan merge pada project secara kelompok di repository yang sama, setiap orang yang bekerja pada repsoitory tersebut pastinya juga akan melakukan merge. 
+
+Masalahnya adalah ketika perubahan yang kita lakukan bentrok dengan perubahan yang orang lain lakukan, misalnya ketika kita dan orang lain mengubah baris kode yang sama dan kemudian melakukan merge ke cabang utama, secara otomatis akan terjadi sebuah confilict dan kita sebagai programmer harus menyelesaikannya. 
+
+Cara menyelesaikan conflict tersebut adalah dengan memilih salah satu dari kedua kode program yang digabungkan, kita cukup menghapus salah satu kode dari kedua cabang.
