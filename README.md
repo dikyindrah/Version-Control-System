@@ -264,3 +264,21 @@ Perintah `git checkout` juga dapat digunakan untuk membuat cabang sekaligus berp
 $ git checkout -b namaBranch
 ```
 
+## Melakukan Merge
+Ketika telah berhasil menyelesaikan fitur, seseorang harus menyatukan cabang dimana dia mengerjakan fitur tersebut ke cabang utama (master). Untuk menggabungkan cabang pada git Ada dua cara:
+
+- *Fast Forward* : Menggabungkan dua cabang yang memiliki jalur langsung dan tidak membuat commit baru.
+
+- *Tree Way Merging* : Menggabungkan dua cabang yang tidak memiliki jalur langsung dengan membuat commit baru.
+
+1. Ketika kita sedang berada di cabang yang kita gunakan untuk mengerjakan fitur sebut saja sebagai branch feature, lakukan checkout terlebih dahulu ke branch master.
+2. Selanjutnya gunakan perintah `git merge` dengan menambahkan nama branch yang ingin kita gabungkan ke branch master yaitu branch feature:
+   ```bash
+   # menggabungkan branch
+   $ git merge namaBranch
+   
+   # menggabugnkan branch feature ke branch master
+   $ git merge feature
+   ```
+3. Jika tidak ada masalah maka branch feature secara otomatis akan menjadi satu dengan branch master.
+
