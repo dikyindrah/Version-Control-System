@@ -22,7 +22,7 @@
   - [Melakukan Checkout](#Melakukan-Checkout)
   - [Melakukan Merge](#Melakukan-Merge)
   - [Menghapus Branch](#Menghapus-Branch)
-  - [Mempersingkat Perintah Git Bash Yang Panjang](#Mempersingkat-Perintah-Git-Bash-Yang-Panjang)
+  - [Mempersingkat Perintah Git](#Mempersingkat-Perintah-Git)
   
 ## Tentang Version Control System
 Version Control System (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
@@ -311,4 +311,19 @@ $ git branch -d namaBranch
 
 # Menghapus branch yang belum di merge
 $ git branch -D namaBranch
-````
+```
+
+## Mempersingkat Perintah Git
+Mungkin seseorang akan membuat sebuah perintah yang panjang dengan menggabungkan berbagai argumen untuk keperluan yang lebih spesifik, hal ini akan sangat merepotkan jika kita harus mengetik dari awal untuk keperluan yang sama.
+
+Pada kasus ini git telah menyediakan sebuah perintah `alias` untuk mempersingkat perintah yang panjang. Kita cukup memanggil nama singkatan dari perintah yang panjang untuk menggunakannya:
+```bash
+# Mempersingkat perintah git
+$ alias namaSingkatPerintah = "perintah git yang panjang"
+
+# Contoh ketika saya menyingkat perintah untuk menampilkan riwayat perubahan dengan grafik bercabang
+$ alias riwayat = "git log --all --decorate --oneline --graph"
+
+# Memanggil perintah riwayat
+$ riwayat
+```
