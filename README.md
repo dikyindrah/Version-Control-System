@@ -236,48 +236,48 @@ $ git log --all --decorate --oneline --graph
 ```
 
 ## Membuat Branch
-Secara umum branch memiliki arti cabang. Pada git pembuatan cabang digunakan untuk mengembangkan fitur baru pada project tetapi kita tidak ingin merusak atau menggangu file utama dari project, Kemudian pembuatan cabang juga digunakan untuk membagi tugas ke setiap orang yang mengembangkan fitur pada pengembangan project secara kelompok di repository yang sama. 
+Secara umum branch memiliki arti cabang. Pada git pembuatan branch digunakan untuk mengembangkan fitur baru pada project tetapi kita tidak ingin merusak atau menggangu file utama dari project, Kemudian pembuatan branch juga digunakan untuk membagi tugas ke setiap orang yang mengembangkan fitur pada pengembangan project secara kelompok di repository yang sama. 
 
-Gunakan perintah `git branch` untuk membuat cabang:
+Gunakan perintah `git branch` untuk membuat branch:
 ```bash
 # Membuat Branch
 $ git branch namaBranch
 ```
 
 ## Melakukan Checkout
-Checkout memungkinkan kita untuk berpindah cabang dan kembali ke keadaan project pada waktu tertentu.
+Checkout memungkinkan kita untuk berpindah branch dan kembali ke keadaan project pada waktu tertentu.
 
-Kita hanya perlu menggunakan perintah `git checkout` untuk memindahkan posisi HEAD -> (ini adalah tanda yang menunjukan posisi saat ini kita berada) ke cabang atau keadaan yang kita inginkan:
+Kita hanya perlu menggunakan perintah `git checkout` untuk memindahkan posisi HEAD -> (ini adalah tanda yang menunjukan posisi saat ini kita berada) ke branch atau keadaan yang kita inginkan:
 
 ```bash
-# Berpindah cabang
+# Berpindah branch
 $ git checkout namaBranch
 
 # Kembali pada keadaan project pada waktu tertentu
 $ git checkout kodeHash
 ```
 
-Perintah `git checkout` juga dapat digunakan untuk membuat cabang sekaligus berpindah pada cabang tersebut, tambahkan argumen berikut:
+Perintah `git checkout` juga dapat digunakan untuk membuat branch sekaligus berpindah pada branch tersebut, tambahkan argumen berikut:
 
 ```bash
-# Membuat cabang sekaligus berpindah pada cabang tersebut
+# Membuat branch sekaligus berpindah pada branch tersebut
 $ git checkout -b namaBranch
 ```
 
 ## Melakukan Merge
-Ketika telah berhasil menyelesaikan fitur, seseorang harus menyatukan cabang dimana dia mengerjakan fitur tersebut ke cabang utama (master). 
+Ketika telah berhasil menyelesaikan fitur, seseorang harus menyatukan branch dimana dia mengerjakan fitur tersebut ke branch utama (master). 
 
-Hal yang perlu diperhatikan sebelum benar-benar melakukan merge adalah jalur penggabungan cabang, pada git terdapat dua jalur penggabungan yaitu:
+Hal yang perlu diperhatikan sebelum benar-benar melakukan merge adalah jalur penggabungan branch, pada git terdapat dua jalur penggabungan yaitu:
 
-- *Fast Forward* : Cabang ini memliki jalur langsung dengan cabang utama, jika menggabungakan cabang pada jalur ini kedua cabang akan tergabung menjadi satu tanpa membuat commit baru.
+- *Fast Forward* : branch ini memliki jalur langsung dengan branch utama, jika menggabungakan branch pada jalur ini kedua branch akan tergabung menjadi satu tanpa membuat commit baru.
 
-- *Tree Way Merging* : Cabang ini tidak memliki jalur langsung dengan cabang utama, jika menggabungakan cabang pada jalur ini kedua cabang akan tergabung menjadi satu dengan membuat commit baru.
+- *Tree Way Merging* : branch ini tidak memliki jalur langsung dengan branch utama, jika menggabungakan branch pada jalur ini kedua branch akan tergabung menjadi satu dengan membuat commit baru.
 
-Lalu bagaimana cara menggabungkan cabang?...
+Lalu bagaimana cara menggabungkan branch?...
 
-**Menggabungkan Cabang:**
+**Menggabungkan branch:**
 
-1. Ketika sedang berada di cabang yang gunakan untuk mengerjakan fitur, sebut saja sebagai branch feature, lakukan checkout atau berpindah cabang terlebih dahulu ke branch master.
+1. Ketika sedang berada di branch yang gunakan untuk mengerjakan fitur, sebut saja sebagai branch feature, lakukan checkout atau berpindah branch terlebih dahulu ke branch master.
 2. Selanjutnya gunakan perintah `git merge` dengan menambahkan nama branch yang ingin kita gabungkan ke branch master, yaitu branch feature:
    ```bash
    # menggabungkan branch
@@ -288,8 +288,27 @@ Lalu bagaimana cara menggabungkan cabang?...
    ```
 3. Jika tidak ada masalah maka branch feature secara otomatis akan menjadi satu dengan branch master.
 
-Dalam melakakukan merge di sebuah cabang pada project individu sebuah conflict/masalah akan jarang ditemukan. Berbeda jika kita melakukan merge pada project secara kelompok di repository yang sama, setiap orang yang bekerja pada repsoitory tersebut pastinya juga akan melakukan merge. 
+Dalam melakakukan merge di sebuah branch pada project individu sebuah conflict/masalah akan jarang ditemukan. Berbeda jika kita melakukan merge pada project secara kelompok di repository yang sama, setiap orang yang bekerja pada repsoitory tersebut pastinya juga akan melakukan merge. 
 
-Masalahnya adalah ketika perubahan yang kita lakukan bentrok dengan perubahan yang orang lain lakukan, misalnya ketika kita dan orang lain mengubah baris kode yang sama dan kemudian melakukan merge ke cabang utama, secara otomatis akan terjadi sebuah confilict dan kita sebagai programmer harus menyelesaikannya. 
+Masalahnya adalah ketika perubahan yang kita lakukan bentrok dengan perubahan yang orang lain lakukan, misalnya ketika kita dan orang lain mengubah baris kode yang sama dan kemudian melakukan merge ke branch utama, secara otomatis akan terjadi sebuah confilict dan kita sebagai programmer harus menyelesaikannya. 
 
-Cara menyelesaikan conflict tersebut adalah dengan memilih salah satu dari kedua kode program yang digabungkan, kita cukup menghapus salah satu kode dari kedua cabang.
+Cara menyelesaikan conflict tersebut adalah dengan memilih salah satu dari kedua kode program yang digabungkan, kita cukup menghapus salah satu kode dari kedua branch.
+
+## Menghapus Branch
+Selain membuat kita juga dapat menghapus branch yang kita miliki. Penghapusan branch sendiri memiliki dua kriteria yaitu branch yang telah di merge dan baranch yang belum di merge. lalu bagaimana cara kita mengetahi branch mana saja yang sudah di merge dan yang belum di merge jika kita memiliki branyak branch?. Guanakan perintah berikut:
+```bash
+# Mengetahui branch yang belum di merge
+$ git branch --no-merged
+
+# Mengetahui branch yang sudah di merge
+$ git branch --merged
+```
+
+Setelah kita mengetahui kriteria branch yang akan di hapus, selanjutnya kita dapat menentukan perintah mana yang akan kita gunakan untuk menghapus branch tersebut:
+```bash
+# Menghapus branch yang telah di merge
+$ git branch -d namaBranch
+
+# Menghapus branch yang belum di merge
+$ git branch -D namaBranch
+````
