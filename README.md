@@ -327,3 +327,5 @@ $ alias riwayat = "git log --all --decorate --oneline --graph"
 # Memanggil perintah riwayat
 $ riwayat
 ```
+
+*note*: Penggunaan perintah `alias` hanya berlaku pada satu sesi saja dan tidak permanen.
