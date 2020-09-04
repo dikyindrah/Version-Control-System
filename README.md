@@ -15,6 +15,7 @@
   - [Membuat Repository](#Membuat-Repository)
   - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-Project-Kedalam-Repository)
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
+  - [.gitignore 🔧](#gitignore)
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
@@ -22,7 +23,14 @@
   - [Melakukan Checkout](#Melakukan-Checkout)
   - [Melakukan Merge](#Melakukan-Merge)
   - [Menghapus Branch](#Menghapus-Branch)
+  - [Melakukan Rebase 🔧](#Melakukan-Rebase)
   - [Mempersingkat Perintah Git](#Mempersingkat-Perintah-Git)
+  - [Membatalkan Perubahan 🔧](#Membatalkan-Perubahan)
+  - [Menambahkan Remote 🔧](#Menambahkan-Remote)
+  - [Melakukan Clone](#Melakukan-Clone)
+  - [Melakukan Fetch Dan Pull 🔧](#Melakukan-Fetch-Dan-Pull)
+  - [Melakukan Push 🔧](#)
+  - [](#)
   
 ## Tentang Version Control System
 Version Control System (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
