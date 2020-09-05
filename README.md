@@ -15,7 +15,7 @@
   - [Membuat Repository](#Membuat-Repository)
   - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-Project-Kedalam-Repository)
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
-  - [Ignoring File 🔧](#gitignore)
+  - [Ignoring File 🔧](#Ignoring-File)
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
@@ -188,8 +188,43 @@ $ git add namaFile
 $ git add .
 ```
 
-## .gitignore
+## Ignoring File
+Ignoring adalah sebuah cara yang digunakan untuk menabaikan file yang tidak ingin kita commit. Caranya adalah mendaftarkan nama atau extensi dari file - file tersebut ke sebuah file bernama `.gitignore`.
 
+Nama atau extensi dari file yang sudah di daftarkan akan diabaikan oleh git meski berapapun kita melakukan commit. Dibawah ini adalah contoh ketika saya menggunakan `.gitignore` untuk mengabaikan file yang sebenarnya tidak ingin saya commit:
+
+1. Membuat file bernama .gitignore dan menyimpannya kedalam direktory project.
+2. Mendaftarkan nama atau extensi file yang tidak ingin di commit, kedalam file .gitignore.
+   ```bash
+   # Mengabaikan semua file berekstensi
+   *.exe
+   *.jar
+   *.txt
+   
+   # Mengabaikan file berdasarkan nama
+   project.class
+   database.db
+   file.*
+   
+   # Mengabaikan folder
+   folderku/
+   folder01/folder02
+   
+   # Mengabaikan folder berserta file didalamnya
+   folderku/file.txt
+   folderku/*.jar
+
+   # Mengabaikan dengan pengecualian
+   ! /folderku
+   ! index.html
+   ```
+3. Lakukan commit seperti biasa.
+
+Contoh diatas menggunakan cara manual, Sebenarnya ada cara lain yang lebih mudah untuk dilakukan. Kita hanya perlu mengunjungi website yang menyediakan layanan untuk merekomendasikan file apa saja yang sebaiknya kita abaikan untuk project yang sedang kita kembangkan. 
+
+Website penyedian layanan ignoring file:
+- [gitignore.io](https://www.toptal.com/developers/gitignore)
+- [github.com](https://github.com/github/gitignore)
 
 ## Melakukan Commit
 Setelah perubahan pada project didalam repository telah di tandai, selanjutnya adalah melakukan commit untuk menyimpan perubahan yang telah dilakukan kedalam git directory. Kita dapat menggunakan perintah `git commit` untuk menyimpan perubahan tersebut. Cara yang dapat dilakukan adalah:
