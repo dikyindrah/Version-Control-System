@@ -23,7 +23,7 @@
   - [Melakukan Checkout](#Melakukan-Checkout)
   - [Melakukan Merge](#Melakukan-Merge)
   - [Menghapus Branch](#Menghapus-Branch)
-  - [Melakukan Rebase 🔧](#Melakukan-Rebase)
+  - [Melakukan Rebase](#Melakukan-Rebase)
   - [Mempersingkat Perintah Git](#Mempersingkat-Perintah-Git)
   - [Membatalkan Perubahan 🔧](#Membatalkan-Perubahan)
   - [Menambahkan Remote 🔧](#Menambahkan-Remote)
@@ -370,7 +370,8 @@ Contoh penggunaan rebase:
 1. Pastikan kita sedang berada pada branch yang tertingal dari branch utama, branch yang tertinggal sebut saja branch feature.
 2. Dari branch feature akukan rebase ke branch utama dengan menggunakan perintah `rebase`
    ```bash
-   $ git rebase master
+   # Melakukan rebase ke branch utama
+   $ git rebase branchUatama
    ```
 3. Setelah proses rebase selesai, lakukan checkout ke branch utama.
 4. Dari branch utama lakukan merge ke branch feature.
