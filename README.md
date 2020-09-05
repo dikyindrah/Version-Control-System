@@ -360,6 +360,23 @@ $ git branch -d namaBranch
 $ git branch -D namaBranch
 ```
 
+## Melakukan Rebase
+Rebase merupakan cara yang digunakan untuk memindahkan branch yang memiliki titik dimana saat ini bercabang ke titik terbaru dari branch untama.
+
+Rebase digunakan untuk merapikan history commit atau riwayat perubahan pada branch yang ada di repository lokal dan belum di kirim ke remote / git server, rebase juga digunakan untuk mengupdate file project pada branch utama ketika branch yang sedang kita gunakan untuk mengembangkan fitur tertinggal beberapa commit.
+
+Contoh penggunaan rebase:
+
+1. Pastikan kita sedang berada pada branch yang tertingal dari branch utama, branch yang tertinggal sebut saja branch feature.
+2. Dari branch feature akukan rebase ke branch utama dengan menggunakan perintah `rebase`
+   ```bash
+   $ git rebase master
+   ```
+3. Setelah proses rebase selesai, lakukan checkout ke branch utama.
+4. Dari branch utama lakukan merge ke branch feature.
+
+*Note:* Rebase sebaiknya tidak digunakan pada branch yang sudah dipublikasikan ke remote / git server dan dipakai orang lain. 
+
 ## Mempersingkat Perintah Git
 Mungkin seseorang akan membuat sebuah perintah yang panjang dengan menggabungkan berbagai argumen untuk keperluan yang lebih spesifik, hal ini akan sangat merepotkan jika kita harus mengetik dari awal untuk keperluan yang sama.
 
