@@ -15,7 +15,7 @@
   - [Membuat Repository](#Membuat-Repository)
   - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-Project-Kedalam-Repository)
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
-  - [Ignoring File 🔧](#Ignoring-File)
+  - [Ignoring File](#Ignoring-File)
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
