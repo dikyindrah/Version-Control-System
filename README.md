@@ -207,12 +207,12 @@ Nama atau extensi dari file yang sudah di daftarkan akan diabaikan oleh git mesk
    file.*
    
    # Mengabaikan folder
-   folderku/
-   folder01/folder02
+   /folderku
+   /folder01/folder02
    
    # Mengabaikan folder berserta file didalamnya
-   folderku/file.txt
-   folderku/*.jar
+   /folderku/file.txt
+   /folderku/*.jar
 
    # Mengabaikan dengan pengecualian
    ! /folderku
@@ -225,6 +225,7 @@ Contoh diatas menggunakan cara manual, Sebenarnya ada cara lain yang lebih mudah
 Website penyedian layanan ignoring file:
 - [gitignore.io](https://www.toptal.com/developers/gitignore)
 - [github.com](https://github.com/github/gitignore)
+- [salcode](https://gist.github.com/salcode/10017553)
 
 ## Melakukan Commit
 Setelah perubahan pada project didalam repository telah di tandai, selanjutnya adalah melakukan commit untuk menyimpan perubahan yang telah dilakukan kedalam git directory. Kita dapat menggunakan perintah `git commit` untuk menyimpan perubahan tersebut. Cara yang dapat dilakukan adalah:
