@@ -27,10 +27,10 @@
   - [Mempersingkat Perintah Git](#Mempersingkat-Perintah-Git)
   - [Membatalkan Perubahan 🔧](#Membatalkan-Perubahan)
   - [Menambahkan Remote 🔧](#Menambahkan-Remote)
-  - [Melakukan Clone](#Melakukan-Clone)
+  - [Melakukan Clone 🔧](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull 🔧](#Melakukan-Fetch-Dan-Pull)
-  - [Melakukan Push 🔧](#)
-  - [](#)
+  - [Melakukan Push 🔧](#Melakukan-Push)
+  <!-- - [](#) -->
   
 ## Tentang Version Control System
 Version Control System (VCS) merupakan sebuah sistem yang digunakan untuk mengelola perubahan project pada sebuah repository (sebuah tempat dimana project itu disimpan). Sistem ini secara otomatis mencatat dan menyimpan setiap informasi perubahan yang terjadi pada project di titik waktu tertentu (Snapshot). 
