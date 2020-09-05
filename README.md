@@ -15,7 +15,7 @@
   - [Membuat Repository](#Membuat-Repository)
   - [Membuat Dan Menempatkan Project Kedalam Repository](#Membuat-Dan-Menempatkan-Project-Kedalam-Repository)
   - [Memindahkan File Kedalam Staging Area](#Memindahkan-File-Kedalam-Staging-Area)
-  - [.gitignore 🔧](#gitignore)
+  - [Ignoring File 🔧](#gitignore)
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
@@ -187,6 +187,9 @@ $ git add namaFile
 # Memindahkan Seluruh file yang ada pada working directory
 $ git add .
 ```
+
+## .gitignore
+
 
 ## Melakukan Commit
 Setelah perubahan pada project didalam repository telah di tandai, selanjutnya adalah melakukan commit untuk menyimpan perubahan yang telah dilakukan kedalam git directory. Kita dapat menggunakan perintah `git commit` untuk menyimpan perubahan tersebut. Cara yang dapat dilakukan adalah:
