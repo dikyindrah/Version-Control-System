@@ -1,0 +1,24 @@
+#.gitignore
+# Contoh:
+
+# Mengabaikan semua file berekstensi
+*.exe
+*.jar
+*.txt
+   
+# Mengabaikan file berdasarkan nama
+project.class
+database.db
+file.*
+   
+# Mengabaikan folder
+/folderku
+/folder01/folder02
+   
+# Mengabaikan folder berserta file didalamnya
+/folderku/file.txt
+/folderku/*.jar
+
+# Mengabaikan dengan pengecualian
+! /folderku
+! index.html
