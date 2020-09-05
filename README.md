@@ -220,7 +220,7 @@ Nama atau extensi dari file yang sudah di daftarkan akan diabaikan oleh git mesk
    ```
 3. Lakukan commit seperti biasa.
 
-Contoh diatas menggunakan cara manual, Sebenarnya ada cara lain yang lebih mudah untuk dilakukan. Kita hanya perlu mengunjungi website yang menyediakan layanan untuk merekomendasikan file apa saja yang sebaiknya kita abaikan untuk project yang sedang kita kembangkan. 
+contoh diatas menggunakan cara manual, sebenarnya ada cara lain yang lebih mudah untuk dilakukan. Kita hanya perlu mengunjungi website yang menyediakan layanan untuk merekomendasikan file apa saja yang sebaiknya kita abaikan untuk project yang sedang kita kembangkan. 
 
 Website penyedian layanan ignoring file:
 - [gitignore.io](https://www.toptal.com/developers/gitignore)
