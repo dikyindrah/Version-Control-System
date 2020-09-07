@@ -413,7 +413,7 @@ $ riwayat
 ## Membatalkan Perubahan
 Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu memperhatikan keadaan atau status perubahan yang terdapat pada project. Beberapa cara yang dapat dilakukan untuk membatalkan perubahan berdasarkan keadaan atau status perubahan pada project:
 
-1. modified
+1. Modified
 
    Keadaan modified pada dasarnya sama dengan `CTRL+S` saat kita menyimpan ketika selesai melakukan perubahan pada project. Jadi ketika kita ingin menembalikan project pada status modified, berarti samahalnya project dikembalikan ke keadaan sebelum disimpan. 
 
