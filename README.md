@@ -399,6 +399,7 @@ $ riwayat
 Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu memperhatikan keadaan atau status perubahan yang terdapat pada project. Beberapa cara yang dapat dilakukan untuk membatalkan perubahan berdasarkan keadaan atau status perubahan pada project:
 
 1. modified
+
    Keadaan modified pada dasarnya sama dengan `CTRL+S` saat kita menyimpan ketika selesai melakukan perubahan pada project. Jadi ketika kita ingin menembalikan project pada status modified, berarti samahalnya project dikembalikan ke keadaan sebelum disimpan. 
 
    Cara paling mudah adalah menggunakan kombinasi tombol CTRL+Z untuk melakukan undo atau menggunakan perintah `checkout`:
@@ -410,6 +411,7 @@ Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu me
    Perintah `checkout` tidak hanya dapat digunakan untuk memindahkan HEAD dan membuat branch tetapi juga dapat digunakan untuk hal ini.
 
 2. Staged
+
    Pembatalan pada keadaan menggunakan perintah `restore`. Ini akan mengembalikan project dari staging area ke git directory, dan akan membuat status perubahannya kembali menjadi modified. 
    ```bash
    # Membatalkan perubahan project pada status staged
@@ -417,12 +419,14 @@ Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu me
    ```
 
 3. Commited
+
    Status commited menandakan project sudah di commit dan tersimpan pada database, untuk membatalkan perubahan pada status perubahan ini dapat menggunakan dua cara:
 
    - Revert
+
      Revert membatalkan perubahan dengan cara mengambil perubahan pada titik dimana kita ingin kembali dan menggabungkannya dengan perubahan di titik saat ini, atau istilah lain yang lebih mudah adalah mengambil perubahan di masalalu kemudian menggabungkannya dengan perubahan yang ada di masadepan.
 
-     Contoh penggunaan revert:
+     **Contoh penggunaan revert:**
      1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
      2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
      3. Pada git bash ketikan perintah `revert` untuk membatalkan perubahan:
@@ -435,6 +439,7 @@ Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu me
      6. Lakukan commit.
 
    - Reset
+
      Reset membatalkan perubahan dengan cara kembali pada titik sebelum mengalami kesalahan serta menghapus seluruh riwayat perubahan pada titik yang mengalami kesalahan secara permanen. 
 
      Pada reset, developer diberikan tiga pilihan argumen, untuk mengembalikan project pada status tertentu:
@@ -444,7 +449,7 @@ Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu me
 
      tiga argumen tersebut dapat digunakan sesuai kebutuhan yang kita perlukan.
 
-     Contoh penggunaan reset
+     **Contoh penggunaan reset:**
      1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
      2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
      3. Pada git bash ketikan perintah `reset` untuk membatalkan perubahan:
