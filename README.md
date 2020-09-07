@@ -25,7 +25,7 @@
   - [Menghapus Branch](#Menghapus-Branch)
   - [Melakukan Rebase](#Melakukan-Rebase)
   - [Mempersingkat Perintah Git](#Mempersingkat-Perintah-Git)
-  - [Membatalkan Perubahan 🔧](#Membatalkan-Perubahan)
+  - [Membatalkan Perubahan](#Membatalkan-Perubahan)
   - [Menambahkan Remote 🔧](#Menambahkan-Remote)
   - [Melakukan Clone 🔧](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull 🔧](#Melakukan-Fetch-Dan-Pull)
@@ -323,7 +323,6 @@ Hal yang perlu diperhatikan sebelum benar-benar melakukan merge adalah jalur pen
 Lalu bagaimana cara menggabungkan branch?...
 
 **Menggabungkan branch:**
-
 1. Ketika sedang berada di branch yang gunakan untuk mengerjakan fitur, sebut saja sebagai branch feature, lakukan checkout atau berpindah branch terlebih dahulu ke branch master.
 2. Selanjutnya gunakan perintah `git merge` dengan menambahkan nama branch yang ingin kita gabungkan ke branch master, yaitu branch feature:
    ```bash
@@ -351,7 +350,7 @@ $ git branch --no-merged
 $ git branch --merged
 ```
 
-Setelah kita mengetahui kriteria branch yang akan di hapus, selanjutnya kita dapat menentukan perintah mana yang akan kita gunakan untuk menghapus branch tersebut:
+setelah kita mengetahui kriteria branch yang akan di hapus, selanjutnya kita dapat menentukan perintah mana yang akan kita gunakan untuk menghapus branch tersebut:
 ```bash
 # Menghapus branch yang telah di merge
 $ git branch -d namaBranch
@@ -360,13 +359,21 @@ $ git branch -d namaBranch
 $ git branch -D namaBranch
 ```
 
+kemudian jika memiliki branch yang sudah di push ke remote / git server, dapat menghapusnya dengan cara:
+```bash
+# Menghapus branch yang ada pada remote
+$ git push namaRemote --delete namaBranch
+   
+# # Menghapus branch (feature) yang ada pada remote (origin)
+$ git push origin --delete feature
+```
+
 ## Melakukan Rebase
 Rebase merupakan cara yang digunakan untuk memindahkan branch yang memiliki titik dimana saat ini bercabang ke titik terbaru dari branch untama.
 
 Rebase digunakan untuk merapikan history commit atau riwayat perubahan pada branch yang ada di repository lokal dan belum di kirim ke remote / git server, rebase juga digunakan untuk mengupdate file project pada branch utama ketika branch yang sedang kita gunakan untuk mengembangkan fitur tertinggal beberapa commit.
 
-Contoh penggunaan rebase:
-
+**Contoh penggunaan rebase:**
 1. Pastikan kita sedang berada pada branch yang tertingal dari branch utama, branch yang tertinggal sebut saja branch feature.
 2. Dari branch feature akukan rebase ke branch utama dengan menggunakan perintah `rebase`
    ```bash
@@ -375,6 +382,14 @@ Contoh penggunaan rebase:
    ```
 3. Setelah proses rebase selesai, lakukan checkout ke branch utama.
 4. Dari branch utama lakukan merge ke branch feature.
+5. Lakukan push pada remote / git server di branch tertentu:
+   ```bash
+   # Melakukan push pada remote / git server di branch tertentu
+   $ git push namaRemote namaBranch
+   
+   # Melakukan push pada remote (origin) di branch (master)
+   $ git push origin master
+   ```
 
 *Note:* Rebase sebaiknya tidak digunakan pada branch yang sudah dipublikasikan ke remote / git server dan dipakai orang lain. 
 
