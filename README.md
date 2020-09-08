@@ -19,7 +19,7 @@
   - [Melakukan Commit](#Melakukan-Commit)
   - [Melihat Status Repository](#Melihat-Status-Repository)
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
-  - [Melihat Perbandingan Pada Riwayat Perubahan 🔧](#Melihat-Perbandingan-Pada-Riwayat-Perubahan)
+  - [Melihat Perbandingan Pada Riwayat Perubahan](#Melihat-Perbandingan-Pada-Riwayat-Perubahan)
   - [Membuat Branch](#Membuat-Branch)
   - [Melakukan Checkout](#Melakukan-Checkout)
   - [Melakukan Merge](#Melakukan-Merge)
@@ -283,6 +283,18 @@ Hal lain yang dapat kita lakukan adalah melihat seluruh riwayat perubahan yang a
 # Melihat riwayat perubahan dengan grafik bercabang 
 $ git log --all --decorate --oneline --graph
 ```
+## Melihat Perbandingan Pada Riwayat Perubahan
+Selain melihat riwayat perubahan, kita juga bisa melihat perbandingan pada setiap perubahan yang kita lakukan. Kita dapat menggunakan perintah `diff` untuk memperlihatkan perbandingan file pada keadaan sebelum diuabah dan pada keadaan setelah diubah.
+
+**Melihat riwayat perbandingan:**
+1. Lihat riwayat perubahan menggunakan perintah `log`, kemudian tentukan dua riwayat perubahan yang ingin dibangingkan.
+2. Copy kode hash dari dua riwayat perubahan tersebut.
+3. Pada git bash berikan perintah:
+   ```bash
+   # Melihat perbandingan pada riwayat perubahan
+   $ git diff kodeHashA kodeHashB
+   ```
+4. Akan terlihat perbandingan file pada keadaan sebelum diuabah (-) dan pada keadaan setelah diubah (+).
 
 ## Membuat Branch
 Secara umum branch memiliki arti cabang. Pada git pembuatan branch digunakan untuk mengembangkan fitur baru pada project tetapi kita tidak ingin merusak atau menggangu file utama dari project, Kemudian pembuatan branch juga digunakan untuk membagi tugas ke setiap orang yang mengembangkan fitur pada pengembangan project secara kelompok di repository yang sama. 
