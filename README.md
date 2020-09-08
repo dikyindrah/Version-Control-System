@@ -26,7 +26,7 @@
   - [Melakukan Rebase](#Melakukan-Rebase)
   - [Mempersingkat Perintah Git](#Mempersingkat-Perintah-Git)
   - [Membatalkan Perubahan](#Membatalkan-Perubahan)
-  - [Menambahkan Remote 🔧](#Menambahkan-Remote)
+  - [Bekerja Dengan Remote Repsoitory](#Bekerja-Dengan-Remote-Repsoitory)
   - [Melakukan Clone 🔧](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull 🔧](#Melakukan-Fetch-Dan-Pull)
   - [Melakukan Push 🔧](#Melakukan-Push)
@@ -413,85 +413,90 @@ $ riwayat
 ## Membatalkan Perubahan
 Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu memperhatikan keadaan atau status perubahan yang terdapat pada project. Beberapa cara yang dapat dilakukan untuk membatalkan perubahan berdasarkan keadaan atau status perubahan pada project:
 
-1. Modified
+- Modified
 
-   Keadaan modified pada dasarnya sama dengan `CTRL+S` saat kita menyimpan ketika selesai melakukan perubahan pada project. Jadi ketika kita ingin menembalikan project pada status modified, berarti samahalnya project dikembalikan ke keadaan sebelum disimpan. 
+Keadaan modified pada dasarnya sama dengan `CTRL+S` saat kita menyimpan ketika selesai melakukan perubahan pada project. Jadi ketika kita ingin menembalikan project pada status modified, berarti samahalnya project dikembalikan ke keadaan sebelum disimpan. 
 
-   Cara paling mudah adalah menggunakan kombinasi tombol CTRL+Z untuk melakukan undo atau menggunakan perintah `checkout`:
+Cara paling mudah adalah menggunakan kombinasi tombol CTRL+Z untuk melakukan undo atau menggunakan perintah `checkout`:
 
+```bash
+# Membatalkan perubahan project pada status modified 
+$ git checkout namaFile
+```
+Perintah `checkout` tidak hanya dapat digunakan untuk memindahkan HEAD dan membuat branch tetapi juga dapat digunakan untuk hal ini.
+
+- Staged
+
+Pembatalan pada keadaan menggunakan perintah `restore`. Ini akan mengembalikan project dari staging area ke git directory, dan akan membuat status perubahannya kembali menjadi modified. 
+```bash
+# Membatalkan perubahan project pada status staged
+$ git restore --staged
+```
+
+- Commited
+
+Status commited menandakan project sudah di commit dan tersimpan pada database, untuk membatalkan perubahan pada status perubahan ini dapat menggunakan dua cara:
+
+- Revert
+
+Revert membatalkan perubahan dengan cara mengambil perubahan pada titik dimana kita ingin kembali dan menggabungkannya dengan perubahan di titik saat ini, atau istilah lain yang lebih mudah adalah mengambil perubahan di masalalu kemudian menggabungkannya dengan perubahan yang ada di masadepan.
+
+**Contoh penggunaan revert:**
+1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
+2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
+3. Pada git bash ketikan perintah `revert` untuk membatalkan perubahan:
    ```bash
-   # Membatalkan perubahan project pada status modified 
-   $ git checkout namaFile
+   # Membatalkan perubahan menggunakan revert
+   $ git revert kodeHash
    ```
-   Perintah `checkout` tidak hanya dapat digunakan untuk memindahkan HEAD dan membuat branch tetapi juga dapat digunakan untuk hal ini.
+4. Perbaiki jika terdapat conflict dan kemudan simpan CTRL+S.
+5. Cek status perubahan kemudian pindahkan kedalam staging area.
+6. Lakukan commit.
 
-2. Staged
+- Reset
 
-   Pembatalan pada keadaan menggunakan perintah `restore`. Ini akan mengembalikan project dari staging area ke git directory, dan akan membuat status perubahannya kembali menjadi modified. 
+Reset membatalkan perubahan dengan cara kembali pada titik sebelum mengalami kesalahan serta menghapus seluruh riwayat perubahan pada titik yang mengalami kesalahan secara permanen. 
+
+Pada reset, developer diberikan tiga pilihan argumen, untuk mengembalikan project pada status tertentu:
+- *mixed* : Kembali pada status modified.
+- *soft* : Kembali pada status staged.
+- *hard* : Kembali pada status commited.
+
+tiga argumen tersebut dapat digunakan sesuai kebutuhan yang kita perlukan.
+
+**Contoh penggunaan reset:**
+1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
+2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
+3. Pada git bash ketikan perintah `reset` untuk membatalkan perubahan:
    ```bash
-   # Membatalkan perubahan project pada status staged
-   $ git restore --staged
+   # Membatalkan perubahan menggunakan reset
+   $ git reset --argumen kodeHash
+   
+   # Kembali pada status modified
+   $ git reset --mixed kodeHash
+
+   # Kembali pada status staged
+   $ git reset --soft kodeHash
+
+   # Kembali pada status commited
+   $ git reset --hard kodeHash
    ```
 
-3. Commited
+4. tandai perubahan lalu lakukan commit jika kembali pada status modified, cukup lakukan commit jika kembali pada status staged, dan tidak perlu melakukan apapun jika kembali pada status commited karena file sudah ditandai dan disimpan kedalam database.
 
-   Status commited menandakan project sudah di commit dan tersimpan pada database, untuk membatalkan perubahan pada status perubahan ini dapat menggunakan dua cara:
-
-   - Revert
-
-     Revert membatalkan perubahan dengan cara mengambil perubahan pada titik dimana kita ingin kembali dan menggabungkannya dengan perubahan di titik saat ini, atau istilah lain yang lebih mudah adalah mengambil perubahan di masalalu kemudian menggabungkannya dengan perubahan yang ada di masadepan.
-
-     **Contoh penggunaan revert:**
-     1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
-     2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
-     3. Pada git bash ketikan perintah `revert` untuk membatalkan perubahan:
-        ```bash
-        # Membatalkan perubahan menggunakan revert
-        $ git revert kodeHash
-        ```
-     4. Perbaiki jika terdapat conflict dan kemudan simpan CTRL+S.
-     5. Cek status perubahan kemudian pindahkan kedalam staging area.
-     6. Lakukan commit.
-
-   - Reset
-
-     Reset membatalkan perubahan dengan cara kembali pada titik sebelum mengalami kesalahan serta menghapus seluruh riwayat perubahan pada titik yang mengalami kesalahan secara permanen. 
-
-     Pada reset, developer diberikan tiga pilihan argumen, untuk mengembalikan project pada status tertentu:
-     - *mixed* : Kembali pada status modified.
-     - *soft* : Kembali pada status staged.
-     - *hard* : Kembali pada status commited.
-
-     tiga argumen tersebut dapat digunakan sesuai kebutuhan yang kita perlukan.
-
-     **Contoh penggunaan reset:**
-     1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
-     2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
-     3. Pada git bash ketikan perintah `reset` untuk membatalkan perubahan:
-        ```bash
-        # Membatalkan perubahan menggunakan reset
-        $ git reset --argumen kodeHash
+5. Lakukan push pada remote / git server di branch tertentu:
+   ```bash
+   # Melakukan push pada remote / git server di branch tertentu
+   $ git push -f namaRemote namaBranch
    
-        # Kembali pada status modified
-        $ git reset --mixed kodeHash
+   # Melakukan push pada remote (origin) di branch (master)
+   $ git push -f origin master
+   ```
 
-        # Kembali pada status staged
-        $ git reset --soft kodeHash
+## Bekerja Dengan Remote Repsoitory
+Remote Repository adalah ketika kita bekerja pada repository yang disimpan dan dikelola secara online melalui layanan git server seperti github, gitlab, bitbucket, dll. Repository yang dikelola secara remote, biasanya ditujukan untuk pengembangan project yang melibatkan banyak orang. Tujuannya agar semua orang dapat mengakses dan bekerja untuk mengembangkan project yang sama.
 
-        # Kembali pada status commited
-        $ git reset --hard kodeHash
-        ```
+Untuk dapat bekerja dengan remote reposoitory kita perlu melakukan kloning repository dari git server ke komputer pribadi. Repository yang sudah dikloning akan terisimpan pada komputer pribadi dan akan terhubung pada remote saat kita bekeraja dengan repository tersebut.
 
-     4. tandai perubahan lalu lakukan commit jika kembali pada status modified, cukup lakukan commit jika kembali pada status staged, dan tidak perlu melakukan apapun jika kembali pada status commited karena file sudah ditandai dan disimpan kedalam database.
-
-     5. Lakukan push pada remote / git server di branch tertentu:
-        ```bash
-        # Melakukan push pada remote / git server di branch tertentu
-        $ git push -f namaRemote namaBranch
-   
-        # Melakukan push pada remote (origin) di branch (master)
-        $ git push -f origin master
-        ```
-
-
+Karena orang lain juga bekerja pada repostory yang sama, maka seluruh informasi mengenai riwayat perubahan orang lain dapat kita lihat dan orang lain juga dapat melihat informasi mengenai riwayat perubahan yang kita lakukan.
 
