@@ -21,7 +21,7 @@
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
   - [Melihat Perbandingan Pada Riwayat Perubahan](#Melihat-Perbandingan-Pada-Riwayat-Perubahan)
   - [Membuat Branch](#Membuat-Branch)
-  - [Mengubah Nama Branch 🔧](#Mengubah-Nama-Branch)
+  - [Mengubah Nama Branch](#Mengubah-Nama-Branch)
   - [Melakukan Checkout](#Melakukan-Checkout)
   - [Melakukan Merge](#Melakukan-Merge)
   - [Menghapus Branch](#Menghapus-Branch)
@@ -304,6 +304,26 @@ Gunakan perintah `git branch` untuk membuat branch:
 ```bash
 # Membuat Branch
 $ git branch namaBranch
+```
+
+## Mengubah Nama Branch
+Jika nama branch yang kita buat dirasa kurang mantab atau ada penulisan nama branch yang salah, kita dapat mengubahnya dengan cara:
+
+```bash
+# Jika posisi HEAD berada pada branch lain
+$ git branch -m namaBranchLama namaBranchBaru
+
+# Jika posisi HEAD berada pada branch yang kita ingin ubah namanya
+$ git branch -m namaBranchBaru
+```
+
+Untuk mengubah nama branch yang ada pada remote atau git server:
+```bash
+$ git push origin :namaBranchLama namaBranchBaru
+```
+atau
+```bash
+$ git push origin :namaBranchBaru
 ```
 
 ## Melakukan Checkout
