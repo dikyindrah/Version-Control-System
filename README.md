@@ -21,6 +21,7 @@
   - [Melihat Riwayat Perubahan](#Melihat-Riwayat-Perubahan)
   - [Melihat Perbandingan Pada Riwayat Perubahan](#Melihat-Perbandingan-Pada-Riwayat-Perubahan)
   - [Membuat Branch](#Membuat-Branch)
+  - [Mengubah Nama Branch 🔧](#Mengubah-Nama-Branch)
   - [Melakukan Checkout](#Melakukan-Checkout)
   - [Melakukan Merge](#Melakukan-Merge)
   - [Menghapus Branch](#Menghapus-Branch)
