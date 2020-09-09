@@ -536,7 +536,7 @@ Untuk dapat bekerja dengan remote reposoitory kita perlu melakukan kloning repos
 Karena orang lain juga bekerja pada repostory yang sama, maka seluruh informasi mengenai riwayat perubahan orang lain dapat kita lihat dan orang lain juga dapat melihat informasi mengenai riwayat perubahan yang kita lakukan.
 
 ## Membuat Remote Repsoitory
-Kita dapat membuat remote repository pada layanan git server seperti github, gitlab, bitbucket, dll. 
+Kita dapat membuat remote repository pada layanan git server seperti github, gitlab, bitbucket, dll. Namun sebelum itu kita harus terlebih dahulu membuat akun pada salah satu layanan git server tersebut, baru kemudian kita dapat membuat repository.
 
 - Ada dua cara yang dapat dilakukan untuk membuat remote rempositoy: 
   - Membuat langsung repository di git server kemudian melakukan kloning repository yang telah dibuat tadi ke komputer pribadi.
@@ -548,7 +548,8 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
 3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (pilih **Add a file README.md**).
 4. Jika sudah klik tombol `Create repository`
-5. Lakukan kloning ke komputer pribadi.
+5. Buka git bash, kemudian kofigurasi akun secara global (gunakan username dan email yang sama dengan akun git server)
+6. Tentukan direktory penyimpanan dan lakukan kloning dari git server ke komputer pribadi.
 
 - Cara kedua:
 1. Kunjungi website [https://github.com/](https://github.com/).
@@ -556,7 +557,8 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Jangan pilih apapun**).
 4. Jika sudah klik tombol `Create repository`.
 5. Tentukan direktory penyimpanan, kemudian buat folder dengan nama sama persis seperti nama repository yang telah dibuat di git server.
-6. Buka git bash dan masuk ke folder tersebut, kemudian berikan perintah:
+6. Buka git bash, kemudian kofigurasi akun secara global (gunakan username dan email yang sama dengan akun git server)
+6. Pada git bash dan masuk ke folder tersebut, kemudian berikan perintah:
    ```bash
    $ echo "# namaFolder" >> README.md
    $ git init
