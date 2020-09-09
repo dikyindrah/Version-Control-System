@@ -568,4 +568,5 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 7. Repository di komputer pribadi berhasil dikirim ke git server dan terhubung secara remote.
  
 **Gitlab** 🔧
+
 **Bitbucket** 🔧
