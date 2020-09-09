@@ -196,7 +196,7 @@ Ignoring adalah sebuah cara yang digunakan untuk menabaikan file yang tidak ingi
 
 Nama atau extensi dari file yang sudah di daftarkan akan diabaikan oleh git meski berapapun kita melakukan commit. Dibawah ini adalah contoh ketika saya menggunakan `.gitignore` untuk mengabaikan file yang sebenarnya tidak ingin saya commit:
 
-1. Membuat file bernama .gitignore dan menyimpannya kedalam direktory project.
+1. Membuat file bernama .gitignore dan menyimpannya kedalam direktori project.
 2. Mendaftarkan nama atau extensi file yang tidak ingin di commit, kedalam file .gitignore.
    ```bash
    # Mengabaikan semua file berekstensi
@@ -549,14 +549,14 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (pilih **Add a file README.md**).
 4. Jika sudah klik tombol `Create repository`
 5. Buka git bash, kemudian kofigurasi akun secara global (gunakan username dan email yang sama dengan akun git server)
-6. Tentukan direktory penyimpanan dan lakukan kloning dari git server ke komputer pribadi.
+6. Tentukan direktori penyimpanan dan lakukan kloning dari git server ke komputer pribadi.
 
 - Cara kedua:
 1. Kunjungi website [https://github.com/](https://github.com/).
 2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
 3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Jangan pilih apapun**).
 4. Jika sudah klik tombol `Create repository`.
-5. Tentukan direktory penyimpanan, kemudian buat folder dengan nama sama persis seperti nama repository yang telah dibuat di git server.
+5. Tentukan direktori penyimpanan, kemudian buat folder dengan nama sama persis seperti nama repository yang telah dibuat di git server.
 6. Buka git bash, kemudian kofigurasi akun secara global (gunakan username dan email yang sama dengan akun git server)
 6. Pada git bash dan masuk ke folder tersebut, kemudian berikan perintah:
    ```bash
@@ -572,3 +572,28 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 **Gitlab** 🔧
 
 **Bitbucket** 🔧
+
+## Melakukan Clone
+Clone adalah ketika kita menduplikat remote repository yang ada pada git server ke komputer pribadi. Tujuanya agar kita memiliiki salinan repository sehingga kita dapat mengerjakan project di komputer pribadi, agar dapat terhubung dengan remote repository untuk mengirim perubahan yang kita dilakukan (push), dan mengambil serta memperbarui setiap perubahan project yang terjadi pada remote repository ke lokal repository (pull).
+
+Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol yang akan digunakan yaitu HTTPS (Hypertext Transfer Protocol Secure) dan SSH (Secure Shell), kita dapat menggunakan salah satu dari kedua protokol tersebut untuk melakukan clone.
+
+**Melakukan clone pada github:**
+- HTTPS
+1. Buka [https://github.com/](https://github.com/), kemudian buat repository.
+2. Pada repository klik menu `Code` kemudian pilih *Use HTTPS*.
+3. Copy url yang ada pada menu *Clone with HTTPS*.
+4. Di komputer pribadi, tentukan direktori penyimpanan kemudian buka git bash dan berikan perintah:
+   ```bash
+   # Melakukan clone dengan protokol https
+   $ git clone urlRemote
+
+   $ git clone https://github.com/dikyindrah/namaRepository.git
+   ```
+5. Tunggu hingga seluruh file project beserta repsotory selesai di unduh.
+
+- SSH
+1. Buka [https://github.com/](https://github.com/), kemudian buat repository.
+2. Pada repository klik menu `Code` kemudian pilih *Use SSH*.
+3. Copy url yang ada pada menu *Clone with SSH*.
+
