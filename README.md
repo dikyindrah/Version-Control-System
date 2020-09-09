@@ -29,7 +29,7 @@
   - [Mempersingkat Perintah Git](#Mempersingkat-Perintah-Git)
   - [Membatalkan Perubahan](#Membatalkan-Perubahan)
   - [Bekerja Dengan Remote Repsoitory](#Bekerja-Dengan-Remote-Repsoitory)
-  - [Membuat Repository Di Git Server 🔧](#Membuat-Repository-Di-Git-Server)
+  - [Membuat Remote Repsoitory](#Membuat-Remote-Repsoitory)
   - [Melakukan Clone 🔧](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull 🔧](#Melakukan-Fetch-Dan-Pull)
   - [Melakukan Push 🔧](#Melakukan-Push)
@@ -527,11 +527,44 @@ tiga argumen tersebut dapat digunakan sesuai kebutuhan yang kita perlukan.
    # Melakukan push pada remote (origin) di branch (master)
    $ git push -f origin master
    ```
-
+   
 ## Bekerja Dengan Remote Repsoitory
 Remote Repository adalah ketika kita bekerja pada repository yang disimpan dan dikelola secara online melalui layanan git server seperti github, gitlab, bitbucket, dll. Repository yang dikelola secara remote, biasanya ditujukan untuk pengembangan project yang melibatkan banyak orang. Tujuannya agar semua orang dapat mengakses dan bekerja untuk mengembangkan project yang sama.
 
 Untuk dapat bekerja dengan remote reposoitory kita perlu melakukan kloning repository dari git server ke komputer pribadi. Repository yang sudah dikloning akan terisimpan pada komputer pribadi dan akan terhubung pada remote saat kita bekeraja dengan repository tersebut.
 
 Karena orang lain juga bekerja pada repostory yang sama, maka seluruh informasi mengenai riwayat perubahan orang lain dapat kita lihat dan orang lain juga dapat melihat informasi mengenai riwayat perubahan yang kita lakukan.
+
+## Membuat Remote Repsoitory
+Kita dapat membuat remote repository pada layanan git server seperti github, gitlab, bitbucket, dll. 
+
+- Ada dua cara yang dapat dilakukan untuk membuat remote rempositoy: 
+  - Membuat langsung repository di git server kemudian melakukan kloning repository yang telah dibuat tadi ke komputer pribadi.
+  - Membuat repositoy pada komputer pribadi terlebih dahulu kemudian mengirimnya ke git server.
+
+**Github**
+- Cara pertama:
+1. Kunjungi website [https://github.com/](https://github.com/).
+2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
+3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (pilih **Add a file README.md**).
+4. Jika sudah klik tombol `Create repository`
+5. Lakukan kloning ke komputer pribadi.
+
+- Cara kedua:
+1. Kunjungi website [https://github.com/](https://github.com/).
+2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
+3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Jangan pilih apapun**).
+4. Jika sudah klik tombol `Create repository`.
+5. Tentukan direktory penyimpanan, kemudian buat folder dengan nama sama persis seperti nama repository yang telah dibuat di git server.
+6. Buka git bash dan masuk ke folder tersebut, kemudian berikan perintah:
+   ```bash
+   $ echo "# namaFolder" >> README.md
+   $ git init
+   $ git add README.md
+   $ git commit -m "first commit"
+   $ git remote add origin https://github.com/dikyindrah/test.git
+   $ git push -u origin master
+   ``` 
+7. Repository di komputer pribadi berhasil dikirim ke git server dan terhubung secara remote.
+ 
 
