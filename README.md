@@ -562,7 +562,7 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
    $ git init
    $ git add README.md
    $ git commit -m "first commit"
-   $ git remote add origin https://github.com/dikyindrah/test.git
+   $ git remote add origin https://github.com/dikyindrah/namaRepository.git
    $ git push -u origin master
    ``` 
 7. Repository di komputer pribadi berhasil dikirim ke git server dan terhubung secara remote.
