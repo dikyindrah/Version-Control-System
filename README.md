@@ -593,26 +593,70 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
 5. Tunggu hingga seluruh file project beserta repsotory selesai di unduh.
 
 - SSH
+**STEP 1 : Membuat SSH Key**
+1. Buka git bash, kemudian masuk ke direktori konfigurasi ssh bernama `.ssh` dengan mengetikan perintah berikut:
+   ```bash
+   # Masuk ke direktory konfigurasi ssh
+   $ cd ~/.ssh
+
+   # Atau
+   $ cd C:/Users/namaUsers/.ssh
+   ```
+2. Buat SSH Key pada direktori tersebut dengan perintah:
+   ```bash
+   # Membuat SSH Key
+   $ ssh-keygen -o
+
+   # Atau
+   $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+3. Cek apakah file SSH Key yang dibuat tadi sudah tersimpan di dalam direktori `.ssh` menggunakan perintah `ls`.
+4. Tampilkan dan copy public key *.pub yang telah dibuat menggunakan perintah `cat`:
+   ```bash
+   # Menampilkan public key yang telah dibuat
+   $ cat id_rsa.pub
+
+   # Atau jika diluar direktori .ssh
+   $ cat ~/.ssh/id_rsa.pub
+   ```  
+
+**STEP 2 : Menambahkan Public Key kedalam Pengaturan Github**
+1. Buka pengaturan SSH Keys pada akun github [https://github.com/settings/ssh/new](https://github.com/settings/ssh/new).
+2. Beri tittle sesuai nama file public key dan paste public key yang telah di copy tadi.
+3. Klik tombol *Add SSH Key*.
+
+**STEP 3 : Menambahkan key kedalam ssh-agen**
+1. Masih pada direktori `.ssh`, jalankan ssh-agen menggunakan perintah berikut:
+   ```bash
+   # Menjalankan ssh-agen
+   $ eval `ssh-agent -s`
+   ```
+2. Cek apakah ssh-agen sudah berjalan:
+   ```bash
+  # Mengecek apakah ssh-agen sudah berjalan
+  $ ps -e | grep [s]sh-agent
+   ```
+3. Menambahkan private key kedalam ssh-agen:
+   ```bash
+   # Menambahkan private key kedalam ssh-agen
+   $ ssh-add ~/.ssh/id_rsa
+   ```
+4. Periksa apakan private key berhasil di tambahkan ke ssh-agen:
+   ```bash
+   # Memeriksa apakah private key berhasil di tambahkan ke ssh-agen
+   $ ssh-add -l
+   ```
+
+**STEP 4 : Melakukan Clone**
 1. Buka [https://github.com/](https://github.com/), kemudian buat repository.
 2. Pada repository klik menu `Code` kemudian pilih *Use SSH*.
 3. Copy url yang ada pada menu *Clone with SSH*.
+4. Jika masih di direktori `.ssh`, pindah dan tentukan direktori lain untuk menyimpan repository yang akan di kloning.
+5. Lakukan clone:
+   ```bash
+   # Melakukan clone menggunakan ssh
+   $ git clone git@github.com:dikyindrah/Version-Control-System.git
+   ```
+6. Tunggu hingga proses selesai.
 
-
-
-$ cd ~/.ssh 
-$ cd C:/Users/namaUsers/.ssh
-
-$ ssh-keygen -o
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-
-$ ls
-
-$ ps -e | grep [s]sh-agent
-
-eval `ssh-agent -s`
-ssh-add ~/.ssh/id_rsa
-ssh-add -l
-
-$ cat id_rsa.pub
-$ cat ~/.ssh/id_rsa.pub
 
