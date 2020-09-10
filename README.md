@@ -597,3 +597,22 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
 2. Pada repository klik menu `Code` kemudian pilih *Use SSH*.
 3. Copy url yang ada pada menu *Clone with SSH*.
 
+
+
+$ cd ~/.ssh 
+$ cd C:/Users/namaUsers/.ssh
+
+$ ssh-keygen -o
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+$ ls
+
+$ ps -e | grep [s]sh-agent
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa
+ssh-add -l
+
+$ cat id_rsa.pub
+$ cat ~/.ssh/id_rsa.pub
+
