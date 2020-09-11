@@ -636,8 +636,8 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
    **Note**: Ssh-agen hanya berlaku satu sesi, artinya ssh-agen perlu dijalankan setiap kali membuka git saat bekerja pada project yang di clone melalui SSH.
 2. Cek apakah ssh-agen sudah berjalan:
    ```bash
-  # Mengecek apakah ssh-agen sudah berjalan
-  $ ps -e | grep [s]sh-agent
+   # Mengecek apakah ssh-agen sudah berjalan
+   $ ps -e | grep [s]sh-agent
    ```
 3. Menambahkan private key kedalam ssh-agen:
    ```bash
