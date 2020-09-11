@@ -30,7 +30,7 @@
   - [Membatalkan Perubahan](#Membatalkan-Perubahan)
   - [Bekerja Dengan Remote Repsoitory](#Bekerja-Dengan-Remote-Repsoitory)
   - [Membuat Remote Repsoitory](#Membuat-Remote-Repsoitory)
-  - [Melakukan Clone 🔧](#Melakukan-Clone)
+  - [Melakukan Clone](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull 🔧](#Melakukan-Fetch-Dan-Pull)
   - [Melakukan Push 🔧](#Melakukan-Push)
   <!-- - [](#) -->
@@ -127,7 +127,7 @@ konfigurasi global digunakan untuk mengatur pengenal pada penggunaan git secara 
 $ git config --global user.name "nama"
 $ git config --global user.email "email"
 ```
-*Note:* Perintah `git config` secara umum digunakan untuk mengatur seluruh kofigurasi pada git.
+**Note:** Perintah `git config` secara umum digunakan untuk mengatur seluruh kofigurasi pada git.
 
 ## Konfigurasi Kode Editor
 Git telah menyediakan kode editor bawaan bernama VIM untuk membantu kita menulis kode pada project. Namun akan lebih mudah jika kita dapat menggunakan kode editor lain sebagai kode editor utama, mungkin kode editor yang sering kita pakai seperti Visual Studio Code, Sublime Text, Atom, Notepad++, dll. Konfigurasinya dapat dilakukan dengan cara:
@@ -426,7 +426,7 @@ Rebase digunakan untuk merapikan history commit atau riwayat perubahan pada bran
    $ git push origin master
    ```
 
-*Note:* Rebase sebaiknya tidak digunakan pada branch yang sudah dipublikasikan ke remote / git server dan dipakai orang lain. 
+**Note:** Rebase sebaiknya tidak digunakan pada branch yang sudah dipublikasikan ke remote / git server dan dipakai orang lain. 
 
 ## Mempersingkat Perintah Git
 Mungkin seseorang akan membuat sebuah perintah yang panjang dengan menggabungkan berbagai argumen untuk keperluan yang lebih spesifik, hal ini akan sangat merepotkan jika kita harus mengetik dari awal untuk keperluan yang sama.
@@ -443,7 +443,7 @@ $ alias riwayat = "git log --all --decorate --oneline --graph"
 $ riwayat
 ```
 
-*Note*: Penggunaan perintah `alias` hanya berlaku pada satu sesi saja dan tidak permanen.
+**Note:** Penggunaan perintah `alias` hanya berlaku pada satu sesi saja dan tidak permanen.
 
 ## Membatalkan Perubahan
 Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu memperhatikan keadaan atau status perubahan yang terdapat pada project. Beberapa cara yang dapat dilakukan untuk membatalkan perubahan berdasarkan keadaan atau status perubahan pada project:
@@ -546,7 +546,7 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 - Cara pertama:
 1. Kunjungi website [https://github.com/](https://github.com/).
 2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
-3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (pilih **Add a file README.md**).
+3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Pilih Add a file README.md**).
 4. Jika sudah klik tombol `Create repository`
 5. Buka git bash, kemudian kofigurasi akun secara global (gunakan username dan email yang sama dengan akun git server)
 6. Tentukan direktori penyimpanan dan lakukan kloning dari git server ke komputer pribadi.
@@ -582,7 +582,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
 
 - **SSH**. Clone menggunakan SSH banyak digunakan programmer yang bekerja di perusahaan besar, karena penggunaan algoritma kriptografi pada setiap pertukaran data yang dilakukan sehingga memiliki tingkat keamanan yang lebih tinggi.
 
-**Kesimpulan**: Jika kita hanya mengembangkan project pribadi lebih baik clone menggunakan HTTPS, namun jika kita bekerja pada sebuah perusahaan dan mengembangkan project skala besar bersama orang - orang yang terlibat didalamnya lebih baik clone menggunakan SSH.
+**Kesimpulan:** Jika kita hanya mengembangkan project pribadi lebih baik clone menggunakan HTTPS, namun jika kita bekerja pada sebuah perusahaan dan mengembangkan project skala besar bersama orang - orang yang terlibat didalamnya lebih baik clone menggunakan SSH.
 
 **Melakukan clone:**
 
@@ -641,7 +641,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
    # Menjalankan ssh-agen
    $ eval `ssh-agent -s`
    ```
-   **Note**: Ssh-agen hanya berlaku satu sesi, artinya ssh-agen perlu dijalankan setiap kali membuka git saat bekerja pada project yang di clone melalui SSH.
+   **Note:** Ssh-agen hanya berlaku satu sesi, artinya ssh-agen perlu dijalankan setiap kali membuka git saat bekerja pada project yang di clone melalui SSH.
 2. Cek apakah ssh-agen sudah berjalan:
    ```bash
    # Mengecek apakah ssh-agen sudah berjalan
@@ -652,7 +652,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
    # Menambahkan private key kedalam ssh-agen
    $ ssh-add ~/.ssh/fileKamu
    ```
-   **Note**: Private key tidak memiliki ekstensi file seperti public key *.pub.
+   **Note:** Private key tidak memiliki ekstensi file seperti public key *.pub.
 4. Periksa apakan private key berhasil di tambahkan ke ssh-agen:
    ```bash
    # Memeriksa apakah private key berhasil di tambahkan ke ssh-agen
