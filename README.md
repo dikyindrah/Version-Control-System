@@ -579,7 +579,8 @@ Clone adalah ketika kita menduplikat remote repository yang ada pada git server 
 Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol yang akan digunakan yaitu HTTPS (Hypertext Transfer Protocol Secure) dan SSH (Secure Shell), kita dapat menggunakan salah satu dari kedua protokol tersebut untuk melakukan clone.
 
 **Melakukan clone pada github:**
-- HTTPS
+- **HTTPS**
+
 1. Buka [https://github.com/](https://github.com/), kemudian buat repository.
 2. Pada repository klik menu `Code` kemudian pilih *Use HTTPS*.
 3. Copy url yang ada pada menu *Clone with HTTPS*.
@@ -592,7 +593,8 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
    ```
 5. Tunggu hingga seluruh file project beserta repsotory selesai di unduh.
 
-- SSH
+- **SSH**
+
 **STEP 1 : Membuat SSH Key**
 1. Buka git bash, kemudian masuk ke direktori konfigurasi ssh bernama `.ssh` dengan mengetikan perintah berikut:
    ```bash
@@ -610,14 +612,14 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
    # Atau
    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    ```
-3. Cek apakah file SSH Key yang dibuat tadi sudah tersimpan di dalam direktori `.ssh` menggunakan perintah `ls`.
-4. Tampilkan dan copy public key *.pub yang telah dibuat menggunakan perintah `cat`:
+3. Cek apakah file SSH Key yang dibuat tadi sudah tersimpan di dalam direktori `.ssh` menggunakan perintah `$ ls`.
+4. Tampilkan dan kemudian copy public key *.pub yang telah dibuat menggunakan perintah `cat`:
    ```bash
    # Menampilkan public key yang telah dibuat
-   $ cat id_rsa.pub
+   $ cat fileKamu.pub
 
    # Atau jika diluar direktori .ssh
-   $ cat ~/.ssh/id_rsa.pub
+   $ cat ~/.ssh/fileKamu.pub
    ```  
 
 **STEP 2 : Menambahkan Public Key kedalam Pengaturan Github**
@@ -631,6 +633,7 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
    # Menjalankan ssh-agen
    $ eval `ssh-agent -s`
    ```
+   **Note**: Ssh-agen hanya berlaku satu sesi, artinya ssh-agen perlu dijalankan setiap kali membuka git saat bekerja pada project yang di clone melalui SSH.
 2. Cek apakah ssh-agen sudah berjalan:
    ```bash
   # Mengecek apakah ssh-agen sudah berjalan
@@ -639,8 +642,9 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
 3. Menambahkan private key kedalam ssh-agen:
    ```bash
    # Menambahkan private key kedalam ssh-agen
-   $ ssh-add ~/.ssh/id_rsa
+   $ ssh-add ~/.ssh/fileKamu
    ```
+   **Note**: Private key tidak memiliki ekstensi file seperti public key *.pub.
 4. Periksa apakan private key berhasil di tambahkan ke ssh-agen:
    ```bash
    # Memeriksa apakah private key berhasil di tambahkan ke ssh-agen
@@ -655,8 +659,9 @@ Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol ya
 5. Lakukan clone:
    ```bash
    # Melakukan clone menggunakan ssh
-   $ git clone git@github.com:dikyindrah/Version-Control-System.git
+   $ git clone git@github.com:dikyindrah/namaRepository.git
    ```
 6. Tunggu hingga proses selesai.
+7. Masuk kedalam repostory untuk mengelola project.
 
 
