@@ -576,9 +576,17 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 ## Melakukan Clone
 Clone adalah ketika kita menduplikat remote repository yang ada pada git server ke komputer pribadi. Tujuanya agar kita memiliiki salinan repository sehingga kita dapat mengerjakan project di komputer pribadi, agar dapat terhubung dengan remote repository untuk mengirim perubahan yang kita dilakukan (push), dan mengambil serta memperbarui setiap perubahan project yang terjadi pada remote repository ke lokal repository (pull).
 
-Clone dapat dilakukan dengan dua cara. Kedua cara ini terkait dengan protokol yang akan digunakan yaitu HTTPS (Hypertext Transfer Protocol Secure) dan SSH (Secure Shell), kita dapat menggunakan salah satu dari kedua protokol tersebut untuk melakukan clone.
+Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan clone. Kedua cara ini terkait dengan protokol yang akan digunakan yaitu HTTPS (Hypertext Transfer Protocol Secure) dan SSH (Secure Shell). Pertanyaannya adalah kapan kita harus menggunakan HTTPS dan SSH untuk melakukan clone?
 
-**Melakukan clone pada github:**
+- **HTTPS**. Beberapa layanan git server merekomendasikan clone menggunakan HTTPS untuk penggunaan umum karena lebih mudah untuk digunakan. Namun dari segi keamanan HTTPS masih banyak kekurangan, tapi bukan berati tidak aman sama sekali hanya saja tidak disarankan pada pengemabangan project skala besar di perusahaan.
+
+- **SSH**. Clone menggunakan SSH banyak digunakan programmer yang bekerja di perusahaan besar, karena penggunaan algoritma kriptografi pada setiap pertukaran data yang dilakukan sehingga memiliki tingkat keamanan yang lebih tinggi.
+
+**Kesimpulan**: Jika kita hanya mengembangkan project pribadi lebih baik clone menggunakan HTTPS, namun jika kita bekerja pada sebuah perusahaan dan mengembangkan project skala besar bersama orang - orang yang terlibat didalamnya lebih baik clone menggunakan SSH.
+
+**Melakukan clone:**
+
+**GitHub**
 - **HTTPS**
 
 1. Buka [https://github.com/](https://github.com/), kemudian buat repository.
