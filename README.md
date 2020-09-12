@@ -543,7 +543,7 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 6. Tentukan direktori penyimpanan dan lakukan kloning dari git server ke komputer pribadi.
 
 - Cara kedua:
-1. Kunjungi website **[https://github.com/](https://github.com/).**
+1. Kunjungi halaman **[https://github.com/](https://github.com/).**
 2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
 3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Jangan pilih apapun!**).
 4. Jika sudah klik tombol `Create repository`.
@@ -580,7 +580,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
 **GitHub**
 - **HTTPS**
 
-1. Buka halaman **[https://github.com/](https://github.com/)**, kemudian buat repository.
+1. Kunjungi halaman **[https://github.com/](https://github.com/)**, kemudian buat repository.
 2. Pada repository klik menu `Code` kemudian pilih *Use HTTPS*.
 3. Copy url yang ada pada menu *Clone with HTTPS*.
 4. Di komputer pribadi, tentukan direktori penyimpanan kemudian buka git bash dan berikan perintah:
@@ -651,7 +651,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
    ```
 
 **STEP 4 : Melakukan Clone**
-1. Buka halaman **[https://github.com/](https://github.com/)**, kemudian buat repository.
+1. Kunjungi halaman **[https://github.com/](https://github.com/)**, kemudian buat repository.
 2. Pada repository klik menu `Code` kemudian pilih *Use SSH*.
 3. Copy url yang ada pada menu *Clone with SSH*.
 4. Jika masih di direktori `.ssh`, pindah dan tentukan direktori lain untuk menyimpan repository yang akan di kloning.
