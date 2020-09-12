@@ -695,5 +695,16 @@ Fetch dan pull adalah dua cara yang digunakan untuk mengambil perubahan yang ter
   $ git pull origin master
   ```
 
+## Melakukan Push
+Push adalah cara yang digunakan untuk mengirim perubahan project yang telah di commit pada repostory lokal ke remote repository. Untuk melakukan push pada git bash berikan perintah:
+```bash
+# Mengirim perubahan yang ada di lokal ke remote
+$ git push namaRemote namaBranch
 
+# Mengirim perubahan pada remote origin di branch master
+$ git push origin master
+
+# Mengirim perubahan pada remote origin di branch feature
+$ git push origin feature
+```
 
