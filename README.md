@@ -74,7 +74,7 @@ Git adalah software version control yang diciptakan oleh Linus Torvalds, yang pa
 |---|---|---|---|---|  -->
 
 ## Apa Itu Github?
-Github adalah version control system berbasis web yang dapat digunakan untuk menyimpan project, mengelola project didalam repository, dan sebagai remote atau git server pada pengembangan project secara kelompok, ini digunakan untuk menyimpan repository secara online melalui layanan cloud di internet agar setiap orang dapat mengakses dan bekeja pada repository yang sama.
+Github adalah version control system berbasis web yang dapat digunakan untuk menyimpan project, mengelola project didalam repository, dan sebagai remote atau git server pada pengembangan project yang melibatkan orang banyak, ini digunakan untuk menyimpan repository secara online melalui layanan hos web di internet agar setiap orang dapat mengakses dan bekeja pada repository yang sama.
 
 **Version control system berbasis web lain:**
 
@@ -86,42 +86,42 @@ Git memiliki area dan beberapa keadaan file yang perlu diketahui. Hal ini akan m
 
 **Area :**
 
-- *Working Directory* : Ini adalah area diamana kita bekerja untuk mengembangkan project. pada area ini kita dapat menambah, mengubah isi, dan menghapus file pada project didalam repository.
+- **Working Directory.** Ini adalah area diamana kita bekerja untuk mengembangkan project. pada area ini kita dapat menambah, mengubah isi, dan menghapus file pada project didalam repository.
 
-- *Staging Area* : Area ini untuk menampung file - file beserta perubahan yang ingin kita commit (Rekaman perubahan (Snapshot) yang disimpan). File yang sudah masukan ke area ini akan dilacak atau ditandai untuk dipantau pada setiap perubahan yang terjadi. 
+- **Staging Area.** Area ini untuk menampung file - file beserta perubahan yang ingin kita commit (Rekaman perubahan (Snapshot) yang disimpan). File yang sudah masukan ke area ini akan dilacak atau ditandai untuk dipantau pada setiap perubahan yang terjadi. 
 
-- *Git Directory* : Seluruh file beserta perubahannya disimpan pada area ini (database lokal git) sebagai commit.
+- **Git Directory.** Seluruh file beserta perubahannya disimpan pada area ini (database lokal git) sebagai commit.
 
 **Keadaan File :**
 
-- *Untracked* : File belum dimasukan ke staging area yang artinya file tersebut belum terlacak atau ditandai oleh git, dalam keadaan ini apapun yang terjadi pada file tersebut akan diabaikan oleh git.
+- **Untracked.** File belum dimasukan ke staging area yang artinya file tersebut belum terlacak atau ditandai oleh git, dalam keadaan ini apapun yang terjadi pada file tersebut akan diabaikan oleh git.
 
-- *modified* : Ketika file sudah disimpan sebagai commit, namun pada file tersebut kembali dilakukan perubahan dan belum di commit.
+- **modified.** Ketika file sudah disimpan sebagai commit, namun pada file tersebut kembali dilakukan perubahan dan belum di commit.
 
-- *Staged* : File beserta perubah yang telah dilakukan sudah dimasukan ke staging area dan file tersebut sudah ditandai oleh git untuk dipantau setiap perubahannya.
+- **Staged.** File beserta perubah yang telah dilakukan sudah dimasukan ke staging area dan file tersebut sudah ditandai oleh git untuk dipantau setiap perubahannya.
 
-- *Commited* : Keadaan ini menunjukan bahwa file beserta perubahannya sudah di commit dan sudah dismpan pada database git.
+- **Commited.** Keadaan ini menunjukan bahwa file beserta perubahannya sudah di commit dan sudah dismpan pada database git.
 
 ## Instalasi Git
 - Linux
-  - Instalasi git dengan linux selengkapnya dapat mengunjungi website resmi git [klik disini.](https://git-scm.com/download/linux)
+  - Instalasi git dengan linux selengkapnya dapat mengunjungi halaman resmi git **[https://git-scm.com/download/linux.](https://git-scm.com/download/linux)**
 
 - Windows
-  - Kunjungi website resmi git [klik disini.](https://git-scm.com/download/win)
+  - Kunjungi halaman resmi git **[https://git-scm.com/download/win.](https://git-scm.com/download/win)**
   - Kemudian pilih dan download sesuai tipe sistem yang digunakan oleh windows (32 bit atau 64 bit).
   - Lakukan prosedur instalasi software hingga selesai.
 
 ## Konfigurasi Akun
 Akun perlu ditambahkan sebagai pengenal ketika kita melakukan commit. Untuk konfigurasi akun sendiri terdiri dari lokal dan global.
 
-konfigurasi lokal digunakan untuk mengatur pengenal pada penggunaan git secara lokal, ketika kita mengelola project secara mandiri/offline di komputer pribadi:
+Konfigurasi lokal digunakan untuk mengatur pengenal pada penggunaan git secara lokal, ketika kita mengelola project secara individu atau offline di komputer pribadi. Pada git bash berikan perintah:
 ```bash
 # Konfigurasi akun secara lokal
 $ git config --lokal user.name "nama"
 $ git config --lokal user.email "email"
 ```
 
-konfigurasi global digunakan untuk mengatur pengenal pada penggunaan git secara global yang artinya pada konfigurasi global digunakan ketika kita mengembangkan project secara kelompok di repository yang terdapat pada remote / git server:
+Konfigurasi global digunakan untuk mengatur pengenal pada penggunaan git secara global yang artinya pada konfigurasi ini digunakan ketika kita mengembangkan project di repository yang terdapat pada remote / git server bersama oran lain. Pada git bash berikan perintah:
 ```bash
 # Konfigurasi akun secara global
 $ git config --global user.name "nama"
@@ -130,8 +130,7 @@ $ git config --global user.email "email"
 **Note:** Perintah `git config` secara umum digunakan untuk mengatur seluruh kofigurasi pada git.
 
 ## Konfigurasi Kode Editor
-Git telah menyediakan kode editor bawaan bernama VIM untuk membantu kita menulis kode pada project. Namun akan lebih mudah jika kita dapat menggunakan kode editor lain sebagai kode editor utama, mungkin kode editor yang sering kita pakai seperti Visual Studio Code, Sublime Text, Atom, Notepad++, dll. Konfigurasinya dapat dilakukan dengan cara:
-
+Git telah menyediakan kode editor bawaan bernama VIM untuk membantu kita menulis kode pada project. Namun akan lebih mudah jika kita dapat menggunakan kode editor lain sebagai kode editor utama, mungkin kode editor yang sering kita pakai seperti Visual Studio Code, Sublime Text, Atom, Notepad++, dll. Konfigurasi kode editor dapat dilakukan dengan cara:
 ```bash
 # Konfigurasi kode editor
 $ git config --global core.editor "'paste direktori kode editor disini' -n -w "
@@ -141,7 +140,6 @@ $ git config --global core.editor "'C:\Program Files (x86)\VSCode-win32-x64-1.40
 ```
 
 Setelah mengatur kode editor yang kita inginkan sebagai kode editor utama, selanjutnya kita dapat memanggilnya dengan cara:
-
 ```bash
 # Memanggil kode editor
 $ git config --global -e
@@ -149,7 +147,6 @@ $ git config --global -e
 
 ## Melihat Seluruh Konfigurasi
 Untuk melihat seluruh konfigurasi yang telah di lakukan dapat menggunakan perintah berikut:
-
 ```bash
 #Melihat seluruh konfigurasi
 $ git config --list
@@ -160,7 +157,7 @@ Pada dasarnya kita membutuhkan sebuah tempat untuk menyimpan seluruh data dan in
 
 Kita dapa menggunakan perintah `git init`, ini adalah perintah yang digunakan untuk menginisialisasi folder menjadi sebuah repository. Beberapa cara yang dapat dilakukan dengan perintah ini:
 
-Membuat folder terlebih dahulu pada komputer kemudian masuk pada folder tersebut dan ketikan perintah git bash:
+Membuat folder terlebih dahulu pada komputer kemudian masuk pada folder tersebut dan berikan perintah berikut pada git bash:
 ```bash
 # Menginisialiasi folder yang sudah ada menjadi sebuah repository
 $ git init .
@@ -182,22 +179,21 @@ Cara paling umum digunakan adalah dengan membuat repository terlebih dahulu kemu
 
 ## Memindahkan File Kedalam Staging Area
 Seluruh file beserta perubahan yang telah dilakukan pada project di dalam repository perlu di pindahkan ke dalam staging area untuk ditandai agar dapat dipantau oleh git pada setiap perubahanya. perintah `git add` dapat digunakan dalam hal ini, beberapa cara yang dapat dilakukan:
-
 ```bash
-# Memindahkan satu file yang ada pada working directory
+# Memindahkan satu file yang ada pada working direktori
 $ git add namaFile
 
-# Memindahkan Seluruh file yang ada pada working directory
+# Memindahkan Seluruh file yang ada pada working direktori
 $ git add .
 ```
 
 ## Ignoring File
-Ignoring adalah sebuah cara yang digunakan untuk menabaikan file yang tidak ingin kita commit. Caranya adalah mendaftarkan nama atau extensi dari file - file tersebut ke sebuah file bernama `.gitignore`.
+Ignoring adalah sebuah cara yang digunakan untuk menabaikan file yang tidak ingin kita commit. Caranya adalah dengan menuliskan nama atau extensi dari file - file tersebut ke sebuah file bernama `.gitignore`.
 
 Nama atau extensi dari file yang sudah di daftarkan akan diabaikan oleh git meski berapapun kita melakukan commit. Dibawah ini adalah contoh ketika saya menggunakan `.gitignore` untuk mengabaikan file yang sebenarnya tidak ingin saya commit:
 
 1. Membuat file bernama .gitignore dan menyimpannya kedalam direktori project.
-2. Mendaftarkan nama atau extensi file yang tidak ingin di commit, kedalam file .gitignore.
+2. Menuliskan nama atau extensi file yang tidak ingin di commit, kedalam file .gitignore.
    ```bash
    # Mengabaikan semua file berekstensi
    *.exe
@@ -226,12 +222,12 @@ Nama atau extensi dari file yang sudah di daftarkan akan diabaikan oleh git mesk
 contoh diatas menggunakan cara manual, sebenarnya ada cara lain yang lebih mudah untuk dilakukan. Kita hanya perlu mengunjungi website yang menyediakan layanan untuk merekomendasikan file apa saja yang sebaiknya kita abaikan untuk project yang sedang kita kembangkan. 
 
 Website penyedian layanan ignoring file:
-- [gitignore.io](https://www.toptal.com/developers/gitignore)
-- [github.com](https://github.com/github/gitignore)
-- [salcode](https://gist.github.com/salcode/10017553)
+- **[https://www.toptal.com/developers/gitignore](https://www.toptal.com/developers/gitignore)**
+- **[https://github.com/github/gitignore](https://github.com/github/gitignore)**
+- **[https://gist.github.com/salcode/10017553](https://gist.github.com/salcode/10017553)**
 
 ## Melakukan Commit
-Setelah perubahan pada project didalam repository telah di tandai, selanjutnya adalah melakukan commit untuk menyimpan perubahan yang telah dilakukan kedalam git directory. Kita dapat menggunakan perintah `git commit` untuk menyimpan perubahan tersebut. Cara yang dapat dilakukan adalah:
+Setelah perubahan pada project didalam repository telah di tandai, selanjutnya adalah melakukan commit untuk menyimpan perubahan yang telah dilakukan kedalam git direktori. Kita dapat menggunakan perintah `git commit` untuk menyimpan perubahan tersebut. Cara yang dapat dilakukan adalah:
 
 Ketika file atau project didalam repository baru pertama kali dibuat dan dipindahkan ke staging area untuk ditandai, gunakan perintah:
 ```bash
@@ -242,7 +238,7 @@ $ git commit -m "menambahkan file index.html pada project"
 ```
 perintah tersebut dapat digunakan, tetapi setiap kali perubahan yang ingin kita commit harus kita masukan kedalam staging area terlebih dahulu kemudian commit dapat dilakukan dengan perintah tersebut.
 
-Namun jika sebelumnya file atau project didalam repository sudah pernah dilakukan commit, yang artinya kita kembali melakukan perubahan pada file atau project tersebut. Maka kita dapat memindahkan ke staging area sekaligus melakukan commit menggunakan perintah berikut:
+Jika sebelumnya file atau project didalam repository sudah pernah dilakukan commit, yang artinya kita kembali melakukan perubahan pada file atau project tersebut. Maka kita dapat memindahkan ke staging area sekaligus melakukan commit menggunakan perintah berikut:
 ```bash
 $ git commit -am "tuslis pesan berupa keterangan commit"
 
@@ -251,17 +247,16 @@ $ git commit -am "menambahkan struktur html pada file index.html"
 ```
 
 ## Melihat Status Repository
-Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh pengguna git, ini akan membuat kita lebih mudah dalam mengetahui apa-apa saja yang telah terjadi pada project didalam repository, serta membantu kita dalam menentukan langkah apa yang selanjutnya perlu dilakukan. Perintah `git status` dapat digunakan untuk melihat status perubahan yang terjadi pada project didalam repository, pada git bash ketikan perintah:
-
+Setiap perubahan yang terjadi pada repository dapat dilihat dan dikontrol oleh pengguna git, ini akan membuat kita lebih mudah dalam mengetahui apa-apa saja yang telah terjadi pada project yang ada didalam repository, serta membantu kita dalam menentukan langkah apa yang selanjutnya perlu dilakukan. Perintah `git status` dapat digunakan untuk melihat status perubahan yang terjadi pada project didalam repository, pada git bash ketikan perintah:
 ```bash
 # Melihat Status Repository
 $ git status
 ```
 
 ## Melihat Riwayat Perubahan
-Tidak hanya melihat status repositoy, tetapi kita juga dapat melihat riwayat perubahan atau history dari sebuah commit yang dilakukan oleh diri kita dan orang lain.
+Tidak hanya melihat status repositoy, tetapi kita juga dapat melihat riwayat perubahan atau history dari sebuah commit yang kita lakukan dan orang lain.
 
-Perintah `git log` dapat kita gunakan untuk melihat seluruh riwayat perubahan project yang yang telah dilakukan, kemudian kita juga dapat menambahkan beberapa argumen untuk menampiilkan sesuatu yang lebih spesifik: 
+Perintah `git log` dapat kita gunakan untuk melihat seluruh riwayat perubahan project yang yang telah dilakukan, kemudian kita juga dapat menambahkan beberapa argumen untuk menampiilkan sesuatu yang lebih spesifik. Beberapa cara yang dapat dilakukan: 
 ```bash
 # Melihat seluruh riwayat perubahan
 $ git log --all
@@ -279,16 +274,16 @@ $ git log -- namaFile
 $ git log --diff-filter=D
 ```
 
-Hal lain yang dapat kita lakukan adalah melihat seluruh riwayat perubahan yang ada dalam bentuk grafik bercabang, tentunya ini akan membuat kita lebih mudah dalam pemantauan  suadah sampai mana project yang telah dikembangkan.
+Hal lain yang dapat kita lakukan adalah melihat seluruh riwayat perubahan yang ada dalam bentuk grafik bercabang, tentunya ini akan membuat kita lebih mudah dalam memantau perkembangan project yang telah dilakukan.
 ```bash
 # Melihat riwayat perubahan dengan grafik bercabang 
 $ git log --all --decorate --oneline --graph
 ```
 ## Melihat Perbandingan Pada Riwayat Perubahan
-Selain melihat riwayat perubahan, kita juga bisa melihat perbandingan pada setiap perubahan yang kita lakukan. Kita dapat menggunakan perintah `diff` untuk memperlihatkan perbandingan file pada keadaan sebelum diuabah dan pada keadaan setelah diubah.
+Selain melihat riwayat perubahan, kita juga bisa melihat perbandingan pada setiap perubahan yang kita lakukan. Kita dapat menggunakan perintah `git diff` untuk memperlihatkan perbandingan file pada keadaan sebelum diuabah dan pada keadaan setelah diubah.
 
 **Melihat riwayat perbandingan:**
-1. Lihat riwayat perubahan menggunakan perintah `log`, kemudian tentukan dua riwayat perubahan yang ingin dibangingkan.
+1. Lihat riwayat perubahan menggunakan perintah `git log`, kemudian tentukan dua riwayat perubahan yang ingin dibangingkan.
 2. Copy kode hash dari dua riwayat perubahan tersebut.
 3. Pada git bash berikan perintah:
    ```bash
@@ -298,7 +293,7 @@ Selain melihat riwayat perubahan, kita juga bisa melihat perbandingan pada setia
 4. Akan terlihat perbandingan file pada keadaan sebelum diuabah (-) dan pada keadaan setelah diubah (+).
 
 ## Membuat Branch
-Secara umum branch memiliki arti cabang. Pada git pembuatan branch digunakan untuk mengembangkan fitur baru pada project tetapi kita tidak ingin merusak atau menggangu file utama dari project, Kemudian pembuatan branch juga digunakan untuk membagi tugas ke setiap orang yang mengembangkan fitur pada pengembangan project secara kelompok di repository yang sama. 
+Secara umum branch memiliki arti cabang. Pada git pembuatan branch digunakan untuk mengembangkan fitur baru pada project tetapi kita tidak ingin merusak atau menggangu file utama dari project, Kemudian pembuatan branch juga digunakan untuk membagi tugas ke setiap orang yang bekerja pada pengembangan project skala besar di repository yang sama. 
 
 Gunakan perintah `git branch` untuk membuat branch:
 ```bash
@@ -307,8 +302,7 @@ $ git branch namaBranch
 ```
 
 ## Mengubah Nama Branch
-Jika nama branch yang kita buat dirasa kurang mantab atau ada penulisan nama branch yang salah, kita dapat mengubahnya dengan cara:
-
+Jika nama branch yang kita buat dirasa kurang pas atau ada penulisan nama branch yang salah, kita dapat mengubahnya dengan cara:
 ```bash
 # Jika posisi HEAD berada pada branch lain
 $ git branch -m namaBranchLama namaBranchBaru
@@ -317,7 +311,7 @@ $ git branch -m namaBranchLama namaBranchBaru
 $ git branch -m namaBranchBaru
 ```
 
-Untuk mengubah nama branch yang ada pada remote atau git server:
+Untuk mengubah nama branch yang ada pada remote repository atau git server:
 ```bash
 $ git push origin :namaBranchLama namaBranchBaru
 ```
@@ -462,7 +456,7 @@ Perintah `checkout` tidak hanya dapat digunakan untuk memindahkan HEAD dan membu
 
 - Staged
 
-Pembatalan pada keadaan menggunakan perintah `restore`. Ini akan mengembalikan project dari staging area ke git directory, dan akan membuat status perubahannya kembali menjadi modified. 
+Pembatalan pada keadaan menggunakan perintah `restore`. Ini akan mengembalikan project dari staging area ke git direktori, dan akan membuat status perubahannya kembali menjadi modified. 
 ```bash
 # Membatalkan perubahan project pada status staged
 $ git restore --staged

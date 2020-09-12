@@ -7,7 +7,7 @@
 *.txt
    
 # Mengabaikan file berdasarkan nama
-project.class
+proyek.class
 database.db
 file.*
    
