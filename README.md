@@ -673,9 +673,23 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
 7. Masuk kedalam repostory untuk mengelola project.
 
 ## Melakukan Fetch Dan Pull
-Fetch dan pull adalah dua cara yang digunakan untuk mengambil perubahan yang terjadi pada remote repository, kedua cara ini sebenarnya memiliki kegunaan yang sama tetapi memiliki prilaku yang berbeda.
+Fetch dan pull adalah dua cara yang digunakan untuk mengambil perubahan yang terjadi pada remote repository, kedua cara ini sebenarnya memiliki kegunaan yang sama tetapi memiliki prilaku yang berbeda, fetch mengambil informasi perubahan dan pull mengambil perubahan dan memperbaharui perubahan yang ada di lokal.
 
-- **Fetch.** Mengambil seluruh informasi mengenai perubahan yang terjadi pada remote repository. 
+- **Fetch.** Mengambil seluruh informasi mengenai perubahan yang terjadi pada remote repository. fetch dapat dilakukan di branch manapun, karena pada dasarnya fetch hanya mengambil informasi saja. Pada git bash berikan perintah:
+```bash
+# Melakukan fetch
+$ git fetch namaRemote
 
-- **Pull.** Mengambil seluruh perubahan pada remote repository untuk memperbaharui repository yang ada di lokal.
+$ git fetch origin
+```
+
+- **Pull.** Mengambil seluruh perubahan pada remote repository untuk memperbaharui repository yang ada di lokal. Kita perlu pindah ke branch master terlebih dahulu untuk melakukan pull, karena jika tidak maka baranch master akan merge ke branch dimana saat ini kita berada. Pada git bash berikan perintah:
+```bash
+# Melakukan pull
+$ git pull namaRemote namaBranch
+
+$ git pull origin master
+```
+
+
 
