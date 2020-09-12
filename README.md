@@ -32,7 +32,7 @@
   - [Membuat Remote Repsoitory](#Membuat-Remote-Repsoitory)
   - [Melakukan Clone](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull](#Melakukan-Fetch-Dan-Pull)
-  - [Melakukan Push 🔧](#Melakukan-Push)
+  - [Melakukan Push](#Melakukan-Push)
   <!-- - [](#) -->
   
 ## Tentang Version Control System
