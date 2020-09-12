@@ -323,8 +323,7 @@ $ git push origin :namaBranchBaru
 ## Melakukan Checkout
 Checkout memungkinkan kita untuk berpindah branch dan kembali ke keadaan project pada waktu tertentu.
 
-Kita hanya perlu menggunakan perintah `git checkout` untuk memindahkan posisi HEAD -> (ini adalah tanda yang menunjukan posisi saat ini kita berada) ke branch atau keadaan yang kita inginkan:
-
+Kita hanya perlu menggunakan perintah `git checkout` untuk memindahkan posisi HEAD -> (ini adalah tanda yang menunjukan posisi saat ini kita berada) ke branch atau keadaan yang kita inginkan. Pada git bash berikan perintah:
 ```bash
 # Berpindah branch
 $ git checkout namaBranch
@@ -334,7 +333,6 @@ $ git checkout kodeHash
 ```
 
 Perintah `git checkout` juga dapat digunakan untuk membuat branch sekaligus berpindah pada branch tersebut, tambahkan argumen berikut:
-
 ```bash
 # Membuat branch sekaligus berpindah pada branch tersebut
 $ git checkout -b namaBranch
@@ -345,9 +343,9 @@ Ketika telah berhasil menyelesaikan fitur, seseorang harus menyatukan branch dim
 
 Hal yang perlu diperhatikan sebelum benar-benar melakukan merge adalah jalur penggabungan branch, pada git terdapat dua jalur penggabungan yaitu:
 
-- *Fast Forward* : branch ini memliki jalur langsung dengan branch utama, jika menggabungakan branch pada jalur ini kedua branch akan tergabung menjadi satu tanpa membuat commit baru.
+- **Fast Forward.** Branch ini memliki jalur langsung dengan branch utama, jika menggabungakan branch pada jalur ini kedua branch akan tergabung menjadi satu tanpa membuat commit baru.
 
-- *Tree Way Merging* : branch ini tidak memliki jalur langsung dengan branch utama, jika menggabungakan branch pada jalur ini kedua branch akan tergabung menjadi satu dengan membuat commit baru.
+- **Tree Way Merging.** Branch ini tidak memliki jalur langsung dengan branch utama, jika menggabungakan branch pada jalur ini kedua branch akan tergabung menjadi satu dengan membuat commit baru.
 
 Lalu bagaimana cara menggabungkan branch?...
 
@@ -363,14 +361,14 @@ Lalu bagaimana cara menggabungkan branch?...
    ```
 3. Jika tidak ada masalah maka branch feature secara otomatis akan menjadi satu dengan branch master.
 
-Dalam melakakukan merge di sebuah branch pada project individu sebuah conflict/masalah akan jarang ditemukan. Berbeda jika kita melakukan merge pada project secara kelompok di repository yang sama, setiap orang yang bekerja pada repsoitory tersebut pastinya juga akan melakukan merge. 
+Dalam melakakukan merge di sebuah branch pada project individu sebuah conflict atau masalah akan jarang ditemukan. Berbeda jika kita melakukan merge pada project yang dikembangkan bersama orang lain dalam team di repository yang sama, setiap orang yang bekerja pada repsoitory tersebut pastinya juga akan melakukan merge. 
 
 Masalahnya adalah ketika perubahan yang kita lakukan bentrok dengan perubahan yang orang lain lakukan, misalnya ketika kita dan orang lain mengubah baris kode yang sama dan kemudian melakukan merge ke branch utama, secara otomatis akan terjadi sebuah confilict dan kita sebagai programmer harus menyelesaikannya. 
 
 Cara menyelesaikan conflict tersebut adalah dengan memilih salah satu dari kedua kode program yang digabungkan, kita cukup menghapus salah satu kode dari kedua branch.
 
 ## Menghapus Branch
-Selain membuat kita juga dapat menghapus branch yang kita miliki. Penghapusan branch sendiri memiliki dua kriteria yaitu branch yang telah di merge dan baranch yang belum di merge. lalu bagaimana cara kita mengetahi branch mana saja yang sudah di merge dan yang belum di merge jika kita memiliki branyak branch?. Guanakan perintah berikut:
+Selain membuat kita juga dapat menghapus branch yang kita miliki. Penghapusan branch sendiri memiliki dua kriteria yaitu branch yang telah di merge dan baranch yang belum di merge. lalu bagaimana cara kita mengetahui branch mana saja yang sudah di merge dan yang belum di merge jika kita memiliki branyak branch?. Guanakan perintah berikut pada git bash:
 ```bash
 # Mengetahui branch yang belum di merge
 $ git branch --no-merged
@@ -379,7 +377,7 @@ $ git branch --no-merged
 $ git branch --merged
 ```
 
-setelah kita mengetahui kriteria branch yang akan di hapus, selanjutnya kita dapat menentukan perintah mana yang akan kita gunakan untuk menghapus branch tersebut:
+Setelah kita mengetahui kriteria branch yang akan di hapus, selanjutnya kita dapat menentukan perintah mana yang akan kita gunakan untuk menghapus branch tersebut:
 ```bash
 # Menghapus branch yang telah di merge
 $ git branch -d namaBranch
@@ -388,7 +386,7 @@ $ git branch -d namaBranch
 $ git branch -D namaBranch
 ```
 
-kemudian jika memiliki branch yang sudah di push ke remote / git server, dapat menghapusnya dengan cara:
+Kemudian jika memiliki branch yang sudah di push ke remote / git server, dapat menghapusnya dengan cara:
 ```bash
 # Menghapus branch yang ada pada remote
 $ git push namaRemote --delete namaBranch
@@ -400,11 +398,11 @@ $ git push origin --delete feature
 ## Melakukan Rebase
 Rebase merupakan cara yang digunakan untuk memindahkan branch yang memiliki titik dimana saat ini bercabang ke titik terbaru dari branch untama.
 
-Rebase digunakan untuk merapikan history commit atau riwayat perubahan pada branch yang ada di repository lokal dan belum di kirim ke remote / git server, rebase juga digunakan untuk mengupdate file project pada branch utama ketika branch yang sedang kita gunakan untuk mengembangkan fitur tertinggal beberapa commit.
+Rebase digunakan untuk merapikan history commit atau riwayat perubahan pada branch yang ada di repository lokal dan belum di kirim ke remote repositoy atau git server, rebase juga digunakan untuk memperbarui file project pada branch utama ketika branch yang sedang kita gunakan untuk mengembangkan fitur tertinggal beberapa commit.
 
 **Contoh penggunaan rebase:**
 1. Pastikan kita sedang berada pada branch yang tertingal dari branch utama, branch yang tertinggal sebut saja branch feature.
-2. Dari branch feature akukan rebase ke branch utama dengan menggunakan perintah `rebase`
+2. Dari branch feature akukan rebase ke branch utama dengan menggunakan perintah `git rebase`
    ```bash
    # Melakukan rebase ke branch utama
    $ git rebase branchUatama
@@ -440,23 +438,22 @@ $ riwayat
 **Note:** Penggunaan perintah `alias` hanya berlaku pada satu sesi saja dan tidak permanen.
 
 ## Membatalkan Perubahan
-Perubahan yang telah dilakukana juga dapat dibatalkan, hannya saja kita perlu memperhatikan keadaan atau status perubahan yang terdapat pada project. Beberapa cara yang dapat dilakukan untuk membatalkan perubahan berdasarkan keadaan atau status perubahan pada project:
+Perubahan yang telah dilakukan juga dapat dibatalkan, hannya saja kita perlu memperhatikan keadaan atau status perubahan yang terdapat pada project. Beberapa cara yang dapat dilakukan untuk membatalkan perubahan berdasarkan keadaan atau status perubahan pada project:
 
 - Modified
 
 Keadaan modified pada dasarnya sama dengan `CTRL+S` saat kita menyimpan ketika selesai melakukan perubahan pada project. Jadi ketika kita ingin menembalikan project pada status modified, berarti samahalnya project dikembalikan ke keadaan sebelum disimpan. 
 
-Cara paling mudah adalah menggunakan kombinasi tombol CTRL+Z untuk melakukan undo atau menggunakan perintah `checkout`:
-
+Cara paling mudah adalah menggunakan kombinasi tombol CTRL+Z untuk melakukan undo atau menggunakan perintah `git checkout`:
 ```bash
 # Membatalkan perubahan project pada status modified 
 $ git checkout namaFile
 ```
-Perintah `checkout` tidak hanya dapat digunakan untuk memindahkan HEAD dan membuat branch tetapi juga dapat digunakan untuk hal ini.
+Perintah `git checkout` tidak hanya dapat digunakan untuk memindahkan HEAD dan membuat branch tetapi juga dapat digunakan untuk hal ini.
 
 - Staged
 
-Pembatalan pada keadaan menggunakan perintah `restore`. Ini akan mengembalikan project dari staging area ke git direktori, dan akan membuat status perubahannya kembali menjadi modified. 
+Pembatalan pada keadaan menggunakan perintah `git restore`. Ini akan mengembalikan project dari staging area ke git direktori, dan akan membuat status perubahannya kembali menjadi modified. 
 ```bash
 # Membatalkan perubahan project pada status staged
 $ git restore --staged
@@ -473,7 +470,7 @@ Revert membatalkan perubahan dengan cara mengambil perubahan pada titik dimana k
 **Contoh penggunaan revert:**
 1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
 2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
-3. Pada git bash ketikan perintah `revert` untuk membatalkan perubahan:
+3. Pada git bash ketikan perintah `git revert` untuk membatalkan perubahan:
    ```bash
    # Membatalkan perubahan menggunakan revert
    $ git revert kodeHash
@@ -496,7 +493,7 @@ tiga argumen tersebut dapat digunakan sesuai kebutuhan yang kita perlukan.
 **Contoh penggunaan reset:**
 1. Lihat riwayat perubahan kemudian copy kode hash pada titik perubahan yang ingin di ambil.
 2. Pastikan saat ini posisi HEAD berada di titik yang mengalami kesalahan.
-3. Pada git bash ketikan perintah `reset` untuk membatalkan perubahan:
+3. Pada git bash ketikan perintah `git reset` untuk membatalkan perubahan:
    ```bash
    # Membatalkan perubahan menggunakan reset
    $ git reset --argumen kodeHash
@@ -538,17 +535,17 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
 
 **Github**
 - Cara pertama:
-1. Kunjungi website [https://github.com/](https://github.com/).
+1. Kunjungi halaman **[https://github.com/](https://github.com/).**
 2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
-3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Pilih Add a file README.md**).
+3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Pilih "Add a file README.md"**).
 4. Jika sudah klik tombol `Create repository`
 5. Buka git bash, kemudian kofigurasi akun secara global (gunakan username dan email yang sama dengan akun git server)
 6. Tentukan direktori penyimpanan dan lakukan kloning dari git server ke komputer pribadi.
 
 - Cara kedua:
-1. Kunjungi website [https://github.com/](https://github.com/).
+1. Kunjungi website **[https://github.com/](https://github.com/).**
 2. Klik tanda `+` di bagian kanan atas navbar, lalu pilih *New repository*.
-3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Jangan pilih apapun**).
+3. Pada menu *Create a new repository* pilih dan isi nama repository, deskripsi, privasi,initialize this repository with (**Jangan pilih apapun!**).
 4. Jika sudah klik tombol `Create repository`.
 5. Tentukan direktori penyimpanan, kemudian buat folder dengan nama sama persis seperti nama repository yang telah dibuat di git server.
 6. Buka git bash, kemudian kofigurasi akun secara global (gunakan username dan email yang sama dengan akun git server)
@@ -557,7 +554,7 @@ Kita dapat membuat remote repository pada layanan git server seperti github, git
    $ echo "# namaFolder" >> README.md
    $ git init
    $ git add README.md
-   $ git commit -m "first commit"
+   $ git commit -m "pesan commit"
    $ git remote add origin https://github.com/dikyindrah/namaRepository.git
    $ git push -u origin master
    ``` 
@@ -583,7 +580,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
 **GitHub**
 - **HTTPS**
 
-1. Buka [https://github.com/](https://github.com/), kemudian buat repository.
+1. Buka halaman **[https://github.com/](https://github.com/)**, kemudian buat repository.
 2. Pada repository klik menu `Code` kemudian pilih *Use HTTPS*.
 3. Copy url yang ada pada menu *Clone with HTTPS*.
 4. Di komputer pribadi, tentukan direktori penyimpanan kemudian buka git bash dan berikan perintah:
@@ -625,7 +622,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
    ```  
 
 **STEP 2 : Menambahkan Public Key kedalam Pengaturan Github**
-1. Buka pengaturan SSH Keys pada akun github [https://github.com/settings/ssh/new](https://github.com/settings/ssh/new).
+1. Buka pengaturan SSH Keys pada akun github **[https://github.com/settings/ssh/new](https://github.com/settings/ssh/new).**
 2. Beri tittle sesuai nama file public key dan paste public key yang telah di copy tadi.
 3. Klik tombol *Add SSH Key*.
 
@@ -654,7 +651,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
    ```
 
 **STEP 4 : Melakukan Clone**
-1. Buka [https://github.com/](https://github.com/), kemudian buat repository.
+1. Buka halaman **[https://github.com/](https://github.com/)**, kemudian buat repository.
 2. Pada repository klik menu `Code` kemudian pilih *Use SSH*.
 3. Copy url yang ada pada menu *Clone with SSH*.
 4. Jika masih di direktori `.ssh`, pindah dan tentukan direktori lain untuk menyimpan repository yang akan di kloning.
@@ -681,7 +678,7 @@ Fetch dan pull adalah dua cara yang digunakan untuk mengambil perubahan yang ter
 
 - **Pull** 
 
-  Mengambil seluruh perubahan pada remote repository untuk memperbaharui repository yang ada di lokal. Kita perlu pindah ke branch master terlebih dahulu untuk melakukan pull, karena jika tidak maka baranch master akan merge ke branch dimana saat ini kita berada. Pada git bash berikan perintah:
+  Mengambil seluruh perubahan pada remote repository untuk memperbarui repository yang ada di lokal. Kita perlu pindah ke branch master terlebih dahulu untuk melakukan pull, karena jika tidak maka baranch master akan merge ke branch dimana saat ini kita berada. Pada git bash berikan perintah:
   ```bash
   # Melakukan pull
   $ git pull namaRemote namaBranch
