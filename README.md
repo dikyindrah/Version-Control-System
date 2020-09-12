@@ -31,7 +31,7 @@
   - [Bekerja Dengan Remote Repsoitory](#Bekerja-Dengan-Remote-Repsoitory)
   - [Membuat Remote Repsoitory](#Membuat-Remote-Repsoitory)
   - [Melakukan Clone](#Melakukan-Clone)
-  - [Melakukan Fetch Dan Pull 🔧](#Melakukan-Fetch-Dan-Pull)
+  - [Melakukan Fetch Dan Pull](#Melakukan-Fetch-Dan-Pull)
   - [Melakukan Push 🔧](#Melakukan-Push)
   <!-- - [](#) -->
   
@@ -672,4 +672,10 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
 6. Tunggu hingga proses selesai.
 7. Masuk kedalam repostory untuk mengelola project.
 
+## Melakukan Fetch Dan Pull
+Fetch dan pull adalah dua cara yang digunakan untuk mengambil perubahan yang terjadi pada remote repository, kedua cara ini sebenarnya memiliki kegunaan yang sama tetapi memiliki prilaku yang berbeda.
+
+- **Fetch.** Mengambil seluruh informasi mengenai perubahan yang terjadi pada remote repository. 
+
+- **Pull.** Mengambil seluruh perubahan pada remote repository untuk memperbaharui repository yang ada di lokal.
 
