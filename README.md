@@ -709,6 +709,7 @@ Kita perlu memahami serta mematuhi peraturan tersebut agar kontribusi yang kita 
 **Melakukan Kontribusi:**
 
 **STEP 1: Persiapan**
+
 Beberapa hal yang perlu dipersiapkan:
 1. Git
 2. Akun github
