@@ -700,7 +700,20 @@ $ git push origin master
 $ git push origin feature
 ```
 ## Berkontribusi Pada Sebuah Project Di Github
-**STEP 1: Melakukan Kontribusi**
+Github sudah seperti rumah bagi programmer di seluruh dunia, mereka menyimpan dan mengelola project mereka disini secara pribadi maupun saling berkontribusi satu sama lain.
+
+Untuk dapat berkontribusi pada sebuah project di github, hal pertama yang perlu diperhatikan adalah peraturan untuk melakukan kontribusi pada project tersebut. Biasanya seluruh peraturan disimpan pada sebuah file markdown bernama CONTRIBUTING.md atau README.md .
+
+Kita perlu memahami serta mematuhi peraturan tersebut agar kontribusi yang kita berikan diterima oleh pemilik project.
+
+**Melakukan Kontribusi:**
+**STEP 1: Persiapan**
+Beberapa hal yang perlu dipersiapkan:
+1. Git
+2. Akun github
+3. Kode Editor
+
+**STEP 2: Mengirim Kontribusi**
 
 1. Kunjungi halaman github **[https://github.com/](https://github.com/)**, kemudian login dengan akun pribadi.
 2. Masuk ke alamat github repostory yang ingin kita kontribusi.
@@ -712,7 +725,7 @@ $ git push origin feature
 8. Tunggu hingga perubahan yang kita ajukan di rivew dan di setujui oleh pemilik repository yang kita kontribusi.
 9. Jika disetujui maka akan ada pemberitahuan pesan bahwa perubahan yang telah kita lakukan diterima dan telah di merge ke repository yang kita kontribusi, jika tidak disetujui kemungkinan terdapat beberapa kekurangan dari perubahan yang kita lakukan dan biasanya kita diminta untuk memperbaiki kekurangan tersebut kemudian mengirimkannya kembali.
 
-**STEP 2: Mengupdate Repostiory**
+**STEP 3: Mengupdate Repostiory**
 
 1. Tambahkan remote satu lagi dari repository yang kita kontribusi dengan cara masuk kembali ke alamat github repostory tersebut, kemudian copy url clone repository tersebut.
 2. Pada git bash berikan perintah `git remote add` untuk menambahkan remote baru:
@@ -741,3 +754,5 @@ $ git push origin feature
 5. Cek menggunakan perintah `git log` untuk melihat informasi perubahan terbaru.
 6. Lakukan push informasi yang telah kita fetch dari repostiory yang kita kontribusi ke repository yang ada di akun github pribadi.
 7. Hapus branch yang sudah tidak terpakai baik yang ada di repository lokal maupun repostory di github pribadi.
+
+Referensi: **[https://www.petanikode.com/github-workflow/](https://www.petanikode.com/github-workflow/)**
