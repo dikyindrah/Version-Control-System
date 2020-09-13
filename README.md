@@ -33,7 +33,7 @@
   - [Melakukan Clone](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull](#Melakukan-Fetch-Dan-Pull)
   - [Melakukan Push](#Melakukan-Push)
-  - [Berkontribusi Di Sebuah Project](#Berkontribusi-Di-Sebuah-Project)
+  - [Berkontribusi Pada Sebuah Project 🔧](#Berkontribusi-Pada-Sebuah-Project)
   <!-- - [](#) -->
   
 ## Tentang Version Control System
@@ -699,4 +699,4 @@ $ git push origin master
 # Mengirim perubahan pada remote origin di branch feature
 $ git push origin feature
 ```
-
+## Berkontribusi Pada Sebuah Project
