@@ -33,7 +33,7 @@
   - [Melakukan Clone](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull](#Melakukan-Fetch-Dan-Pull)
   - [Melakukan Push](#Melakukan-Push)
-  - [Berkontribusi Pada Sebuah Project 🔧](#Berkontribusi-Pada-Sebuah-Project)
+  - [Berkontribusi Pada Sebuah Project Di Github](#Berkontribusi-Pada-Sebuah-Project-Di Github)
   <!-- - [](#) -->
   
 ## Tentang Version Control System
@@ -699,4 +699,47 @@ $ git push origin master
 # Mengirim perubahan pada remote origin di branch feature
 $ git push origin feature
 ```
-## Berkontribusi Pada Sebuah Project
+## Berkontribusi Pada Sebuah Project Di Github
+
+
+**STEP 1: Melakukan Kontribusi**
+
+1. Kunjungi halaman github **[https://github.com/](https://github.com/)**, kemudian login dengan akun pribadi.
+2. Masuk ke alamat github repostory yang ingin kita kontribusi.
+3. Lakukan fork pada repository tersebut ke akun github pribadi.
+4. Buka repository yang telah di fork.
+5. Tentukan direktori penyimpanan kemudian lakukan clone repository ke komputer lokal.
+6. Lakukan perubahan dengan membuat branch baru, kemudain commit dan push perubahan pada branch tersebut ke repository yang ada di akun github pribadi.
+7. Masuk ke repository akun github pribadi dan lakukan "Pull request" ke repository yang kita kontribusi untuk mengajukan perubahan yang telah kita lakukan.
+8. Tunggu hingga perubahan yang kita ajukan di rivew dan di setujui oleh pemilik repository yang kita kontribusi.
+9. Jika disetujui maka akan ada pemberitahuan pesan bahwa perubahan yang telah kita lakukan diterima dan telah di merge ke repository yang kita kontribusi, jika tidak disetujui kemungkinan terdapat beberapa kekurangan dari perubahan yang kita lakukan dan biasanya kita diminta untuk memperbaiki kekurangan tersebut kemudian mengirimkannya kembali.
+
+**STEP 2: Mengupdate Repostiory**
+
+1. Tambahkan remote satu lagi dari repository yang kita kontribusi dengan cara masuk kembali ke alamat github repostory tersebut, kemudian copy url clone repository tersebut.
+2. Pada git bash berikan perintah `git remote add` untuk menambahkan remote baru:
+   ```bash
+   # Menambahkan remote baru
+   $ git remote add namaRemote urlRemote
+
+   # Contoh
+   $ git remote add github https://github.com/namaAkun/namaRepository.git
+   ```
+3. Periksa remote menggunakan perintah `git remote`, ini untuk memastikan apakah remote sudah berhasil terhubung:
+   ```bash
+   # Menampilkan daftar nama remote yang terhubung
+   $ git remote
+
+   # Menampilkan daftar nama remote yang terhubung beserta url remote
+   $ git remote -v
+4. Lakukan fetch ke repository yang kita kontribusi untuk mengambil informasi perubahan terbaru.
+   ```bash
+   # Melakukan fetch ke repository yang kita kontribusi
+   $ git fetch namaRemote
+
+   # Contoh 
+   $ git fetch github
+   ```
+5. Cek menggunakan perintah `git log` untuk melihat informasi perubahan terbaru.
+6. Lakukan push informasi yang telah kita fetch dari repostiory yang kita kontribusi ke repository yang ada di akun github pribadi.
+7. Hapus branch yang sudah tidak terpakai baik yang ada di repository lokal maupun repostory di github pribadi.
