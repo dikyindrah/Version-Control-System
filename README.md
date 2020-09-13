@@ -707,6 +707,7 @@ Untuk dapat berkontribusi pada sebuah project di github, hal pertama yang perlu 
 Kita perlu memahami serta mematuhi peraturan tersebut agar kontribusi yang kita berikan diterima oleh pemilik project.
 
 **Melakukan Kontribusi:**
+
 **STEP 1: Persiapan**
 Beberapa hal yang perlu dipersiapkan:
 1. Git
