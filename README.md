@@ -33,7 +33,7 @@
   - [Melakukan Clone](#Melakukan-Clone)
   - [Melakukan Fetch Dan Pull](#Melakukan-Fetch-Dan-Pull)
   - [Melakukan Push](#Melakukan-Push)
-  - [Berkontribusi Pada Sebuah Project Di Github](#Berkontribusi-Pada-Sebuah-Project-Di Github)
+  - [Berkontribusi Pada Sebuah Project Di Github](#Berkontribusi-Pada-Sebuah-Project-Di-Github)
   <!-- - [](#) -->
   
 ## Tentang Version Control System
@@ -595,7 +595,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
 
 - **SSH**
 
-**STEP 1 : Membuat SSH Key**
+**STEP 1: Membuat SSH Key**
 1. Buka git bash, kemudian masuk ke direktori konfigurasi ssh bernama `.ssh` dengan mengetikan perintah berikut:
    ```bash
    # Masuk ke direktory konfigurasi ssh
@@ -622,12 +622,12 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
    $ cat ~/.ssh/fileKamu.pub
    ```  
 
-**STEP 2 : Menambahkan Public Key kedalam Pengaturan Github**
+**STEP 2: Menambahkan Public Key kedalam Pengaturan Github**
 1. Buka pengaturan SSH Keys pada akun github **[https://github.com/settings/ssh/new](https://github.com/settings/ssh/new).**
 2. Beri tittle sesuai nama file public key dan paste public key yang telah di copy tadi.
 3. Klik tombol *Add SSH Key*.
 
-**STEP 3 : Menambahkan key kedalam ssh-agen**
+**STEP 3: Menambahkan key kedalam ssh-agen**
 1. Masih pada direktori `.ssh`, jalankan ssh-agen menggunakan perintah berikut:
    ```bash
    # Menjalankan ssh-agen
@@ -651,7 +651,7 @@ Kita dapat memilih salah satu dari dua cara yang dapat digunakan untuk melakukan
    $ ssh-add -l
    ```
 
-**STEP 4 : Melakukan Clone**
+**STEP 4: Melakukan Clone**
 1. Kunjungi halaman **[https://github.com/](https://github.com/)**, kemudian buat repository.
 2. Pada repository klik menu `Code` kemudian pilih *Use SSH*.
 3. Copy url yang ada pada menu *Clone with SSH*.
@@ -700,8 +700,6 @@ $ git push origin master
 $ git push origin feature
 ```
 ## Berkontribusi Pada Sebuah Project Di Github
-
-
 **STEP 1: Melakukan Kontribusi**
 
 1. Kunjungi halaman github **[https://github.com/](https://github.com/)**, kemudian login dengan akun pribadi.
