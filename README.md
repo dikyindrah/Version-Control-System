@@ -2,7 +2,7 @@
     Version Control System
 </h1>
 
-- ## List
+- ## Daftar Isi
   - [Tentang Version Control System](#Tentang-Version-Control-System)
   - [Jenis Version Control System](#Jenis-Version-Control-System)
   - [Apa Itu Git?](#Apa-itu-Git)
