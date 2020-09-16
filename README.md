@@ -316,10 +316,6 @@ Untuk mengubah nama branch yang ada pada remote repository atau git server:
 ```bash
 $ git push origin :namaBranchLama namaBranchBaru
 ```
-atau
-```bash
-$ git push origin :namaBranchBaru
-```
 
 ## Melakukan Checkout
 Checkout memungkinkan kita untuk berpindah branch dan kembali ke keadaan project pada waktu tertentu.
